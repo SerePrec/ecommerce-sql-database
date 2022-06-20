@@ -156,6 +156,14 @@ CREATE TABLE provider (
     INDEX idx_name (name)
 );
 
+-- Table: stock
+CREATE TABLE stock (
+	id_product INT UNSIGNED NOT NULL,
+    stock SMALLINT NOT NULL DEFAULT 0,
+    last_update DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
+    PRIMARY KEY (id_product)
+);
+
 -- Table: order
 CREATE TABLE `order` (
 	id_order INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -309,6 +317,10 @@ ALTER TABLE provider ADD CONSTRAINT FK_provider_address FOREIGN KEY (id_address)
 -- Reference: FK_provider_iva (table: provider)
 ALTER TABLE provider ADD CONSTRAINT FK_provider_iva FOREIGN KEY (id_iva)
     REFERENCES iva_category (id_iva);
+    
+-- Reference: FK_stock_product (table: stock)
+ALTER TABLE stock ADD CONSTRAINT FK_stock_product FOREIGN KEY (id_product)
+    REFERENCES product (id_product);
     
 -- Reference: FK_order_user (table: order)
 ALTER TABLE `order` ADD CONSTRAINT FK_order_user FOREIGN KEY (id_user)
