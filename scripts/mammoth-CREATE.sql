@@ -54,14 +54,14 @@ CREATE TABLE favorite (
 -- Table: iva_category
 CREATE TABLE iva_category (
 	id_iva INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    iva_category VARCHAR(20) NOT NULL,
+    iva_category VARCHAR(50) NOT NULL,
     PRIMARY KEY (id_iva)
 );
 
 -- Table: address
 CREATE TABLE address (
 	id_address INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    address VARCHAR(50) NOT NULL,
+    address VARCHAR(60) NOT NULL,
     id_city INT UNSIGNED NOT NULL,
     last_update DATETIME NOT NULL DEFAULT NOW() ON UPDATE NOW(),
     PRIMARY KEY (id_address)
@@ -70,7 +70,7 @@ CREATE TABLE address (
 -- Table: city
 CREATE TABLE city (
 	id_city INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    city VARCHAR(30) NOT NULL,
+    city VARCHAR(50) NOT NULL,
     id_province INT UNSIGNED NOT NULL,
     PRIMARY KEY (id_city)
 );
@@ -78,16 +78,20 @@ CREATE TABLE city (
 -- Table: province
 CREATE TABLE province (
 	id_province INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    province VARCHAR(30) NOT NULL,
+    iso_code VARCHAR(6) NOT NULL,
+    province VARCHAR(50) NOT NULL,
     id_country INT UNSIGNED NOT NULL,
-    PRIMARY KEY (id_province)
+    PRIMARY KEY (id_province),
+	CONSTRAINT UN_iso_code UNIQUE (iso_code)
 );
 
 -- Table: country
 CREATE TABLE country (
 	id_country INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    country VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id_country)
+	iso_code CHAR(2) NOT NULL,
+    country VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id_country),
+   	CONSTRAINT UN_iso_code UNIQUE (iso_code)
 );
 
 -- Table: cart
@@ -110,7 +114,7 @@ CREATE TABLE cart_detail (
 CREATE TABLE product (
 	id_product INT UNSIGNED NOT NULL AUTO_INCREMENT,
     code VARCHAR(20),
-    name VARCHAR(50) NOT NULL,
+    name VARCHAR(70) NOT NULL,
     description TEXT,
     id_brand INT UNSIGNED NOT NULL,
 	id_country INT UNSIGNED NOT NULL,
@@ -187,7 +191,7 @@ CREATE TABLE order_detail (
 -- Table: delivery_type
 CREATE TABLE delivery_type (
 	id_delivery INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    delivery_type VARCHAR(15) NOT NULL,
+    delivery_type VARCHAR(40) NOT NULL,
     PRIMARY KEY (id_delivery)
 );
 
@@ -207,7 +211,7 @@ CREATE TABLE invoice (
 -- Table: payment_method
 CREATE TABLE payment_method (
 	id_p_method INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    payment_method VARCHAR(15) NOT NULL,
+    payment_method VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_p_method)
 );
 
@@ -237,7 +241,7 @@ CREATE TABLE date (
 	m_name VARCHAR(10) NOT NULL,
     trimester TINYINT UNSIGNED NOT NULL,
     year YEAR NOT NULL,
-    holiday BOOLEAN NOT NULL,
+    holiday BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY (id_date),
     CONSTRAINT UN_date UNIQUE (date)
 );
