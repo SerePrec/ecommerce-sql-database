@@ -1,0 +1,25 @@
+id_province;iso_code;name;id_country
+1;AR-N;Misiones;11
+2;AR-D;San Luis;11
+3;AR-J;San Juan;11
+4;AR-E;Entre Ríos;11
+5;AR-Z;Santa Cruz;11
+6;AR-R;Río Negro;11
+7;AR-U;Chubut;11
+8;AR-X;Córdoba;11
+9;AR-M;Mendoza;11
+10;AR-F;La Rioja;11
+11;AR-K;Catamarca;11
+12;AR-L;La Pampa;11
+13;AR-G;Santiago del Estero;11
+14;AR-W;Corrientes;11
+15;AR-S;Santa Fe;11
+16;AR-T;Tucumán;11
+17;AR-Q;Neuquén;11
+18;AR-A;Salta;11
+19;AR-H;Chaco;11
+20;AR-P;Formosa;11
+21;AR-Y;Jujuy;11
+22;AR-C;Ciudad Autónoma de Buenos Aires;11
+23;AR-B;Buenos Aires;11
+24;AR-V;Tierra del Fuego;11

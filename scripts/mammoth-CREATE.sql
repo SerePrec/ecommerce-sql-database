@@ -1,7 +1,7 @@
 /***********************************
 	        CREACIÓN DE BD
  ***********************************/
-CREATE SCHEMA IF NOT EXISTS mammoth;
+CREATE DATABASE IF NOT EXISTS mammoth;
 USE mammoth;
 
 /***********************************
@@ -199,6 +199,7 @@ CREATE TABLE delivery_type (
 CREATE TABLE invoice (
 	id_invoice INT UNSIGNED NOT NULL AUTO_INCREMENT,
     invoice_n CHAR(15) NOT NULL,
+	type ENUM("A","B") NOT NULL, 
     id_order INT UNSIGNED NOT NULL,
     id_date INT UNSIGNED NOT NULL,
     amount DECIMAL(11,2) NOT NULL,

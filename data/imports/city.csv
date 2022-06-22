@@ -1,0 +1,516 @@
+id_city;city;id_province
+1;1° de Mayo;19
+2;12 de Octubre;19
+3;2 de Abril;19
+4;25 de Mayo;1
+5;25 de Mayo;3
+6;25 de Mayo;6
+7;25 de Mayo;19
+8;25 de Mayo;23
+9;9 de Julio;3
+10;9 de julio;6
+11;9 de Julio;15
+12;9 de Julio;19
+13;9 de Julio;23
+14;Adolfo Alsina;6
+15;Adolfo Alsina;23
+16;Adolfo Gonzales Chaves;23
+17;Aguirre;13
+18;Albardón;3
+19;Alberdi;13
+20;Alberti;23
+21;Almirante Brown;19
+22;Almirante Brown;23
+23;Aluminé;17
+24;Ambato;11
+25;Ancasti;11
+26;Andalgalá;11
+27;Angaco;3
+28;Anta;18
+29;Antártida Argentina;24
+30;Antofagasta de la Sierra;11
+31;Añelo;17
+32;Apóstoles;1
+33;Arauco;10
+34;Arrecifes;23
+35;Atamisqui;13
+36;Atreucó;12
+37;Avellaneda;6
+38;Avellaneda;13
+39;Avellaneda;23
+40;Ayacucho;2
+41;Ayacucho;23
+42;Azul;23
+43;Bahía Blanca;23
+44;Balcarce;23
+45;Banda;13
+46;Baradero;23
+47;Bariloche;6
+48;Belén;11
+49;Belgrano;2
+50;Belgrano;13
+51;Belgrano;15
+52;Bella Vista;14
+53;Benito Juárez;23
+54;Berazategui;23
+55;Berisso;23
+56;Bermejo;19
+57;Bermejo;20
+58;Berón de Astrada;14
+59;Biedma;7
+60;Bolívar;23
+61;Bragado;23
+62;Brandsen;23
+63;Burruyacú;16
+64;Cachi;18
+65;Cafayate;18
+66;Cainguás;1
+67;Calamuchita;8
+68;Caleu Caleu;12
+69;Calingasta;3
+70;Campana;23
+71;Candelaria;1
+72;Cañuelas;23
+73;Capayán;11
+74;Capital;1
+75;Capital;3
+76;Capital;8
+77;Capital;9
+78;Capital;10
+79;Capital;11
+80;Capital;12
+81;Capital;13
+82;Capital;14
+83;Capital;16
+84;Capital;18
+85;Capitán Sarmiento;23
+86;Carlos Casares;23
+87;Carlos Tejedor;23
+88;Carmen de Areco;23
+89;Caseros;15
+90;Castellanos;15
+91;Castelli;23
+92;Castro Barros;10
+93;Catán Lil;17
+94;Catriló;12
+95;Caucete;3
+96;Cerrillos;18
+97;Chacabuco;2
+98;Chacabuco;19
+99;Chacabuco;23
+100;Chalileo;12
+101;Chamical;10
+102;Chapaleufú;12
+103;Chascomús;23
+104;Chical Co;12
+105;Chicligasta;16
+106;Chicoana;18
+107;Chilecito;10
+108;Chimbas;3
+109;Chivilcoy;23
+110;Chos Malal;17
+111;Choya;13
+112;Ciudad Autónoma de Buenos Aires;22
+113;Ciudad Libertador San Martín;23
+114;Cochinoca;21
+115;Collón Curá;17
+116;Colón;4
+117;Colón;8
+118;Colón;23
+119;Comandante Fernández;19
+120;Concepción;1
+121;Concepción;14
+122;Concordia;4
+123;Conesa;6
+124;Confluencia;17
+125;Conhelo;12
+126;Copo;13
+127;Coronel de Marina Leonardo Rosales;23
+128;Coronel Dorrego;23
+129;Coronel Felipe Varela;10
+130;Coronel Pringles;2
+131;Coronel Pringles;23
+132;Coronel Suárez;23
+133;Corpen Aike;5
+134;Cruz Alta;16
+135;Cruz del Eje;8
+136;Curacó;12
+137;Curuzu Cuatia;14
+138;Cushamen;7
+139;Daireaux;23
+140;Deseado;5
+141;Diamante;4
+142;Dolores;23
+143;Dr. Manuel Belgrano;21
+144;El Alto;11
+145;El Carmen;21
+146;El Cuy;6
+147;Eldorado;1
+148;Empedrado;14
+149;Ensenada;23
+150;Escalante;7
+151;Escobar;23
+152;Esquina;14
+153;Esteban Echeverría;23
+154;Exaltación de la Cruz;23
+155;Famaillá;16
+156;Famatina;10
+157;Federación;4
+158;Federal;4
+159;Feliciano;4
+160;Figueroa;13
+161;Florencio Varela;23
+162;Florentino Ameghino;7
+163;Florentino Ameghino;23
+164;Formosa;20
+165;Fray Justo Santa María de Oro;19
+166;Fray Mamerto Esquiú;11
+167;Futaleufú;7
+168;Gaiman;7
+169;Garay;15
+170;Gastre;7
+171;General Alvarado;23
+172;General Alvear;9
+173;General Alvear;14
+174;General Alvear;23
+175;General Ángel V. Peñaloza;10
+176;General Arenales;23
+177;General Belgrano;10
+178;General Belgrano;19
+179;General Belgrano;23
+180;General Donovan;19
+181;General Güemes;18
+182;General Güemes;19
+183;General Guido;23
+184;General José de San Martín;18
+185;General Juan F. Quiroga;10
+186;General Juan Madariaga;23
+187;General La Madrid;23
+188;General Lamadrid;10
+189;General Las Heras;23
+190;General Lavalle;23
+191;General López;15
+192;General Manuel Belgrano;1
+193;General Obligado;15
+194;General Ocampo;10
+195;General Paz;14
+196;General Paz;23
+197;General Pedernera;2
+198;General Pinto;23
+199;General Pueyrredón;23
+200;General Roca;6
+201;General Roca;8
+202;General Rodríguez;23
+203;General San Martín;8
+204;General San Martín;10
+205;General Taboada;13
+206;General Viamonte;23
+207;General Villegas;23
+208;Gobernador Dupuy;2
+209;Godoy Cruz;9
+210;Goya;14
+211;Graneros;16
+212;Guachipas;18
+213;Gualeguay;4
+214;Gualeguaychú;4
+215;Guaminí;23
+216;Guaraní;1
+217;Guasayán;13
+218;Guatraché;12
+219;Guaymallén;9
+220;Güer Aike;5
+221;Hipólito Yrigoyen;23
+222;Hucal;12
+223;Huiliches;17
+224;Humahuaca;21
+225;Hurlingham;23
+226;Iglesia;3
+227;Iguazú;1
+228;Independencia;10
+229;Independencia;19
+230;Iriondo;15
+231;Iruya;18
+232;Ischilín;8
+233;Islas del Atlántico Sur;24
+234;Islas del Ibicuy;4
+235;Itatí;14
+236;Ituzaingó;14
+237;Ituzaingó;23
+238;Jáchal;3
+239;Jiménez;13
+240;José C. Paz;23
+241;José M. Ezeiza;23
+242;Juan Bautista Alberdi;16
+243;Juan F. Ibarra;13
+244;Juan Martín de Pueyrredón;2
+245;Juárez Celman;8
+246;Junín;2
+247;Junín;9
+248;Junín;23
+249;La Caldera;18
+250;La Candelaria;18
+251;La Capital;15
+252;La Cocha;16
+253;La Costa;23
+254;La Matanza;23
+255;La Paz;4
+256;La Paz;9
+257;La Paz;11
+258;La Plata;23
+259;La Poma;18
+260;La Viña;18
+261;Lácar;17
+262;Lago Argentino;5
+263;Lago Buenos Aires;5
+264;Laishí;20
+265;Languiñeo;7
+266;Lanús;23
+267;Laprida;23
+268;Las Colonias;15
+269;Las Flores;23
+270;Las Heras;9
+271;Lavalle;9
+272;Lavalle;14
+273;Leales;16
+274;Leandro N. Alem;1
+275;Leandro N. Alem;23
+276;Ledesma;21
+277;Lezama;23
+278;Libertad;19
+279;Libertador General San Martín;1
+280;Libertador General San Martín;2
+281;Libertador General San Martín;19
+282;Lihuel Calel;12
+283;Limay Mahuida;12
+284;Lincoln;23
+285;Lobería;23
+286;Lobos;23
+287;Lomas de Zamora;23
+288;Loncopué;17
+289;Loreto;13
+290;Los Andes;18
+291;Los Lagos;17
+292;Loventué;12
+293;Luján;23
+294;Luján de Cuyo;9
+295;Lules;16
+296;Magallanes;5
+297;Magdalena;23
+298;Maipú;9
+299;Maipú;19
+300;Maipú;23
+301;Malargüe;9
+302;Malvinas Argentinas;23
+303;Mar Chiquita;23
+304;Maracó;12
+305;Marcos Juárez;8
+306;Marcos Paz;23
+307;Mártires;7
+308;Matacos;20
+309;Mayor Luis J. Fontana;19
+310;Mburucuyá;14
+311;Mercedes;14
+312;Mercedes;23
+313;Merlo;23
+314;Metán;18
+315;Minas;8
+316;Minas;17
+317;Mitre;13
+318;Molinos;18
+319;Monte;23
+320;Monte Caseros;14
+321;Monte Hermoso;23
+322;Montecarlo;1
+323;Monteros;16
+324;Moreno;13
+325;Moreno;23
+326;Morón;23
+327;Navarro;23
+328;Necochea;23
+329;Nogoyá;4
+330;Ñorquín;17
+331;Ñorquinco;6
+332;Oberá;1
+333;O'Higgins;19
+334;Ojo de Agua;13
+335;Olavarría;23
+336;Orán;18
+337;Paclín;11
+338;Palpalá;21
+339;Paraná;4
+340;Paso de Indios;7
+341;Paso de los Libres;14
+342;Patagones;23
+343;Patiño;20
+344;Pehuajó;23
+345;Pehuenches;17
+346;Pellegrini;13
+347;Pellegrini;23
+348;Pergamino;23
+349;Pichi Mahuida;6
+350;Picún Leufú;17
+351;Picunches;17
+352;Pila;23
+353;Pilagás;20
+354;Pilar;23
+355;Pilcaniyeu;6
+356;Pilcomayo;20
+357;Pinamar;23
+358;Pirané;20
+359;Pocho;8
+360;Pocito;3
+361;Pomán;11
+362;Presidencia de la Plaza;19
+363;Presidente Perón;23
+364;Presidente Roque Sáenz Peña;8
+365;Puán;23
+366;Puelén;12
+367;Punilla;8
+368;Punta Indio;23
+369;Quebrachos;13
+370;Quemú Quemú;12
+371;Quilmes;23
+372;Quitilipi;19
+373;Ramallo;23
+374;Ramón Lista;20
+375;Rancul;12
+376;Rauch;23
+377;Rawson;3
+378;Rawson;7
+379;Realicó;12
+380;Rinconada;21
+381;Río Chico;5
+382;Río Chico;16
+383;Río Cuarto;8
+384;Río Grande;24
+385;Río Hondo;13
+386;Río Primero;8
+387;Río Seco;8
+388;Río Segundo;8
+389;Río Senguer;7
+390;Rivadavia;3
+391;Rivadavia;9
+392;Rivadavia;13
+393;Rivadavia;18
+394;Rivadavia;23
+395;Robles;13
+396;Rojas;23
+397;Roque Pérez;23
+398;Rosario;15
+399;Rosario de la Frontera;18
+400;Rosario de Lerma;18
+401;Rosario Vera Peñaloza;10
+402;Saavedra;23
+403;Saladas;14
+404;Saladillo;23
+405;Salavina;13
+406;Salliqueló;23
+407;Salto;23
+408;San Alberto;8
+409;San Andrés de Giles;23
+410;San Antonio;6
+411;San Antonio;21
+412;San Antonio de Areco;23
+413;San Blas de Los Sauces;10
+414;San Carlos;9
+415;San Carlos;18
+416;San Cayetano;23
+417;San Cosme;14
+418;San Cristóbal;15
+419;San Fernando;19
+420;San Fernando;23
+421;San Ignacio;1
+422;San Isidro;23
+423;San Javier;1
+424;San Javier;8
+425;San Javier;15
+426;San Jerónimo;15
+427;San Justo;8
+428;San Justo;15
+429;San Lorenzo;15
+430;San Lorenzo;19
+431;San Luis del Palmar;14
+432;San Martín;3
+433;San Martín;9
+434;San Martín;13
+435;San Martín;14
+436;San Martín;15
+437;San Miguel;14
+438;San Miguel;23
+439;San Nicolás;23
+440;San Pedro;1
+441;San Pedro;21
+442;San Pedro;23
+443;San Rafael;9
+444;San Roque;14
+445;San Salvador;4
+446;San Vicente;23
+447;Sanagasta;10
+448;Santa Bárbara;21
+449;Santa Catalina;21
+450;Santa Lucía;3
+451;Santa María;8
+452;Santa María;11
+453;Santa Rosa;9
+454;Santa Rosa;11
+455;Santa Victoria;18
+456;Santo Tomé;14
+457;Sargento Cabral;19
+458;Sarmiento;3
+459;Sarmiento;7
+460;Sarmiento;13
+461;Sauce;14
+462;Silípica;13
+463;Simoca;16
+464;Sobremonte;8
+465;Suipacha;23
+466;Susques;21
+467;Tafí del Valle;16
+468;Tafí Viejo;16
+469;Tala;4
+470;Tandil;23
+471;Tapalqué;23
+472;Tapenagá;19
+473;Tehuelches;7
+474;Telsen;7
+475;Tercero Arriba;8
+476;Tigre;23
+477;Tilcara;21
+478;Tinogasta;11
+479;Toay;12
+480;Tolhuin;24
+481;Tordillo;23
+482;Tornquist;23
+483;Totoral;8
+484;Trancas;16
+485;Trenel;12
+486;Trenque Lauquen;23
+487;Tres Arroyos;23
+488;Tres de Febrero;23
+489;Tres Lomas;23
+490;Tulumba;8
+491;Tumbaya;21
+492;Tunuyán;9
+493;Tupungato;9
+494;Ullum;3
+495;Unión;8
+496;Uruguay;4
+497;Ushuaia;24
+498;Utracán;12
+499;Valcheta;6
+500;Valle Fértil;3
+501;Valle Grande;21
+502;Valle Viejo;11
+503;Vera;15
+504;Vicente López;23
+505;Victoria;4
+506;Villa Constitución;15
+507;Villa Gesell;23
+508;Villaguay;4
+509;Villarino;23
+510;Vinchina;10
+511;Yaví;21
+512;Yerba Buena;16
+513;Zapala;17
+514;Zárate;23
+515;Zonda;3

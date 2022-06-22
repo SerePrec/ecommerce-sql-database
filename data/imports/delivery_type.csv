@@ -1,0 +1,7 @@
+id_delivery;delivery_type
+1;Retira por sucursal
+2;Envío a domicilio - OCA
+3;Envío a domicilio - Andreani
+4;Envío a domicilio - UPS
+5;Envío a sucursal de Correo Argentino 
+6;Envío a punto pick it

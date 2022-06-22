@@ -1,0 +1,52 @@
+id_provider;cuit;name;id_address;postcode;phone;email;id_iva;created_at
+1;30-21702578-6;Phillips 66;43;W-4474-DOO;+62-164-232-9437;htungate0@hp.com;1;2022-05-12 05:35:35
+2;30-10127519-6;Everbridge, Inc.;38;A-2440-RMB;+63-943-320-4964;tmcgillivrie1@uiuc.edu;4;2022-04-01 12:04:27
+3;30-24737210-5;First Community Corporation;19;E-2274-NWJ;+351-724-102-7189;jduck2@cloudflare.com;9;2021-11-20 22:46:06
+4;30-31247619-3;Public Storage;44;R-0927-NUE;+216-568-701-6246;gpirazzi3@dyndns.org;1;2022-05-16 19:43:31
+5;30-16939641-6;Arcadia Biosciences, Inc.;9;V-1920-AXL;NULL;cigoe4@noaa.gov;9;2021-08-10 02:29:52
+6;30-24508794-6;Carbonite, Inc.;8;J-1634-GKC;+86-174-526-4488;cwoollcott5@twitter.com;10;2021-07-31 07:33:15
+7;30-40249106-5;NextEra Energy, Inc.;2;Y-1409-YUG;+57-725-210-7267;csouter6@samsung.com;1;2021-06-23 13:33:11
+8;30-38165587-3;Morgan Stanley Debt Fund, Inc.;1;M-5134-UPR;+86-415-689-2915;rshieldon7@comsenz.com;1;2021-06-21 18:57:07
+9;30-27685485-1;Fanhua Inc.;24;A-5165-DBA;+7-599-148-6459;fhearson8@mapy.cz;10;2021-12-18 11:18:20
+10;30-10685882-7;Jaguar Animal Health, Inc.;29;D-9724-ZBK;+387-679-276-4867;isemechik9@pen.io;6;2022-01-21 06:13:14
+11;30-13798449-5;HSBC Holdings plc;42;M-0244-XQF;+86-352-993-9894;kanfussoa@bloglovin.com;1;2022-04-24 18:53:00
+12;30-14206631-8;First Trust Latin America AlphaDEX Fund;36;W-8182-JJJ;+86-900-897-8899;hmccourtieb@yale.edu;1;2022-03-27 22:28:42
+13;30-14644489-7;Proofpoint, Inc.;18;V-9487-JDP;+7-291-689-0956;mskeatsc@aol.com;4;2021-10-30 07:52:50
+14;30-10931121-3;KKR Income Opportunities Fund;41;Q-1699-COT;NULL;dcaveaud@phoca.cz;9;2022-04-16 23:50:13
+15;30-19994791-5;Hebron Technology Co., Ltd.;33;U-5951-VHZ;NULL;sdunke@pinterest.com;1;2022-03-20 06:23:16
+16;30-36704294-8;J P Morgan Chase & Co;28;H-0830-ZMN;NULL;mdraytonf@icio.us;4;2022-01-11 07:20:03
+17;30-27516465-9;Perfumania Holdings, Inc;14;U-2763-KQG;+86-910-168-1917;mstainsg@qq.com;1;2021-09-19 02:32:55
+18;30-27259866-0;ILG, Inc;4;Q-5147-KSA;+55-499-452-1570;bclyanth@blog.com;8;2021-06-30 23:05:27
+19;30-30571405-3;Hostess Brands, Inc.;37;S-9460-BQQ;+86-746-109-7666;wabramskyi@multiply.com;9;2022-03-29 12:37:41
+20;30-23488086-3;MSA Safety Incorporporated;21;D-4029-NCN;NULL;ctruelockj@mail.ru;6;2021-11-24 18:41:48
+21;30-30141517-6;M B T Financial Corp;6;N-8561-YAP;+86-347-484-2998;vlecornuk@goo.ne.jp;1;2021-07-04 15:54:03
+22;30-44946180-3;U.S. Silica Holdings, Inc.;30;C-3215-NPD;NULL;bwynrehamel@yale.edu;10;2022-02-22 05:44:09
+23;30-32149971-9;The Michaels Companies, Inc.;32;O-4559-XPX;NULL;edanatm@topsy.com;10;2022-03-06 16:35:33
+24;30-18798982-7;INVESCO MORTGAGE CAPITAL INC;40;R-2531-BBO;NULL;dlegalln@geocities.jp;4;2022-04-15 08:56:54
+25;30-43886477-1;Neptune Technologies & Bioresources Inc;48;Z-7721-ZXI;+86-833-806-2077;bmcfetridgeo@hatena.ne.jp;1;2022-06-05 02:43:47
+26;30-27974712-3;CommScope Holding Company, Inc.;49;Q-0230-QYZ;NULL;bdivisekp@skype.com;1;2022-06-12 08:35:38
+27;30-15600301-9;Old Line Bancshares, Inc.;10;T-2097-HIP;+62-174-940-7905;yyateq@bigcartel.com;8;2021-08-13 18:09:11
+28;30-15937255-0;Guaranty Federal Bancshares, Inc.;15;X-1704-KXZ;+63-750-551-0620;cpalekr@deliciousdays.com;1;2021-10-09 19:00:25
+29;30-34735665-9;TICC Capital Corp.;39;N-9450-VKC;NULL;mhessentalers@google.cn;1;2022-04-07 01:08:56
+30;30-26180377-2;Liberty Media Corporation;27;V-4263-IFZ;NULL;mgrigort@vistaprint.com;1;2022-01-09 20:57:49
+31;30-14265008-0;First BanCorp.;45;J-5158-HHW;NULL;vsiseyu@cam.ac.uk;1;2022-05-30 16:41:33
+32;30-36067816-4;Goldman Sachs MLP Income Opportunities Fund;31;F-4558-AXV;+48-872-904-1580;fgillottv@reference.com;9;2022-02-27 03:11:03
+33;30-42872516-9;Tsakos Energy Navigation Ltd;12;Q-8843-JUX;+351-265-840-0370;scollissw@businessinsider.com;1;2021-08-31 08:56:54
+34;30-12427955-6;BlackRock Long-Term Municipal Advantage Trust;11;P-7172-HTZ;+7-495-757-4165;lilbertx@home.pl;1;2021-08-19 02:37:23
+35;30-19777433-4;Anixter International Inc.;25;L-4009-AEQ;+351-451-573-7258;ccaneroy@php.net;8;2021-12-27 08:22:47
+36;30-17151316-5;NGL ENERGY PARTNERS LP;35;Z-2042-JEJ;+86-239-530-8607;edominichelliz@army.mil;6;2022-03-26 12:25:17
+37;30-11889066-1;LendingClub Corporation;26;P-0281-WVK;+62-475-196-5177;owheelwright10@phoca.cz;8;2022-01-05 03:54:43
+38;30-22592219-3;Genesis Healthcare, Inc.;34;D-8505-NXY;+380-100-244-3072;rcurryer11@nationalgeographic.com;11;2022-03-21 19:18:29
+39;30-39860499-5;CNX Coal Resources LP;16;A-8015-NSB;+86-285-996-5051;mfardon12@goodreads.com;6;2021-10-17 23:14:26
+40;30-32758812-0;Jones Energy, Inc.;20;J-9263-SDY;+86-580-102-0429;nroddam13@i2i.jp;11;2021-11-23 01:15:22
+41;30-39931820-7;Marriott International;50;C-1950-YNN;+86-929-632-5751;gkingscote14@mail.ru;11;2022-06-16 06:13:58
+42;30-13824406-8;AvalonBay Communities, Inc.;7;K-6631-OLK;NULL;mmaben15@cyberchimps.com;1;2021-07-24 08:44:14
+43;30-30479245-6;Playa Hotels & Resorts N.V.;47;R-1235-JIS;+86-293-725-6734;cstirley16@huffingtonpost.com;9;2022-06-04 06:17:26
+44;30-31765992-5;Penn West Petroleum Ltd;22;W-7727-VTF;+86-510-725-2094;bpyrton17@nasa.gov;6;2021-12-02 07:39:24
+45;30-11336509-1;Career Education Corporation;23;M-5612-GWF;+48-274-220-3949;lcalcott18@123-reg.co.uk;9;2021-12-03 05:54:13
+46;30-25767329-6;Asta Funding, Inc.;5;I-0474-RPD;NULL;eballard19@barnesandnoble.com;2;2021-07-04 05:58:00
+47;30-25937697-1;Skyline Medical Inc.;13;F-3319-XZC;+970-517-425-5131;hmckeeman1a@mlb.com;2;2021-09-17 00:33:18
+48;30-34086770-2;FlexShares Credit-Scored US Index Fund;46;T-0366-AEX;NULL;akingsman1b@eepurl.com;4;2022-06-02 05:53:54
+49;30-32112505-1;VictoryShares Developed Enhanced Wtd ETF;17;P-1998-HFW;+976-683-634-6135;dgawne1c@blogtalkradio.com;10;2021-10-26 05:01:10
+50;30-26385068-8;YuMe, Inc.;3;U-7156-LQB;NULL;mdockerty1d@hatena.ne.jp;2;2021-06-24 15:09:10
+;;;;;;;;
