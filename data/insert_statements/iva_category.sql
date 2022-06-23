@@ -1,0 +1,11 @@
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (1,'IVA Responsable Inscripto');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (2,'IVA Sujeto Exento');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (3,'Consumidor Final');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (4,'Responsable Monotributo');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (5,'Sujeto No Categorizado');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (6,'Proveedor del Exterior');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (7,'Cliente del Exterior');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (8,'IVA Liberado - Ley Nº 19.640');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (9,'Monotributista Social');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (10,'IVA No Alcanzado');
+INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (11,'Monotributista Trabajador Independiente Promovido');
