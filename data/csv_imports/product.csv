@@ -1,106 +1,106 @@
-id_product;stock;last_update
-1;50;2022-06-18 10:21:01
-2;20;2022-06-19 17:41:53
-3;200;2022-06-20 18:39:19
-4;10;2022-06-20 04:49:42
-5;0;2022-06-20 22:03:45
-6;18;2022-06-20 13:39:32
-7;5;2022-06-20 22:46:15
-8;4;2022-06-20 14:02:50
-9;3;2022-06-19 04:48:50
-10;6;2022-06-19 02:47:35
-11;7;2022-06-19 16:31:22
-12;4;2022-06-19 17:11:37
-13;5;2022-06-19 15:29:38
-14;4;2022-06-18 00:33:26
-15;6;2022-06-18 10:31:43
-16;4;2022-06-18 04:13:43
-17;8;2022-06-19 13:52:44
-18;8;2022-06-19 11:26:16
-19;5;2022-06-19 17:20:44
-20;5;2022-06-19 14:26:06
-21;0;2022-06-19 16:36:07
-22;4;2022-06-20 00:36:08
-23;6;2022-06-19 01:27:45
-24;8;2022-06-18 17:01:33
-25;8;2022-06-18 09:23:35
-26;9;2022-06-18 06:07:35
-27;8;2022-06-18 15:35:13
-28;8;2022-06-18 03:04:36
-29;0;2022-06-18 22:14:22
-30;7;2022-06-20 08:24:56
-31;7;2022-06-20 10:39:51
-32;0;2022-06-18 14:04:41
-33;12;2022-06-20 14:36:36
-34;12;2022-06-20 18:23:02
-35;15;2022-06-20 10:30:52
-36;3;2022-06-18 04:01:34
-37;11;2022-06-18 15:31:24
-38;8;2022-06-19 21:08:41
-39;18;2022-06-18 12:54:26
-40;12;2022-06-19 05:13:53
-41;5;2022-06-18 01:34:31
-42;10;2022-06-18 19:26:07
-43;9;2022-06-18 15:05:41
-44;12;2022-06-18 07:22:14
-45;6;2022-06-20 02:57:41
-46;8;2022-06-18 07:13:33
-47;8;2022-06-18 17:34:18
-48;8;2022-06-19 18:34:14
-49;8;2022-06-20 02:22:20
-50;8;2022-06-20 12:39:30
-51;4;2022-06-19 01:03:09
-52;8;2022-06-19 13:48:31
-53;0;2022-06-19 07:24:18
-54;11;2022-06-19 13:33:59
-55;15;2022-06-19 23:28:12
-56;11;2022-06-20 20:47:19
-57;10;2022-06-19 14:45:03
-58;8;2022-06-20 08:39:48
-59;7;2022-06-19 02:12:30
-60;9;2022-06-19 01:53:24
-61;0;2022-06-19 13:26:56
-62;8;2022-06-20 01:01:14
-63;8;2022-06-19 11:48:25
-64;15;2022-06-18 23:27:29
-65;11;2022-06-19 06:16:23
-66;8;2022-06-19 04:50:41
-67;8;2022-06-19 13:17:57
-68;8;2022-06-19 17:16:24
-69;8;2022-06-20 00:50:30
-70;12;2022-06-18 17:29:00
-71;11;2022-06-19 21:53:58
-72;6;2022-06-20 18:54:04
-73;7;2022-06-19 19:34:05
-74;10;2022-06-20 17:42:03
-75;9;2022-06-18 13:58:22
-76;15;2022-06-20 05:01:15
-77;0;2022-06-19 07:37:42
-78;8;2022-06-18 03:15:30
-79;5;2022-06-18 14:45:26
-80;6;2022-06-18 15:01:25
-81;6;2022-06-19 20:11:41
-82;7;2022-06-20 00:03:45
-83;6;2022-06-18 22:40:39
-84;6;2022-06-18 22:13:19
-85;8;2022-06-19 14:54:18
-86;8;2022-06-20 00:01:18
-87;8;2022-06-18 09:54:46
-88;8;2022-06-18 11:02:42
-89;8;2022-06-18 10:05:57
-90;5;2022-06-18 21:44:29
-91;8;2022-06-18 21:52:05
-92;11;2022-06-18 19:49:17
-93;10;2022-06-18 13:08:21
-94;9;2022-06-19 07:30:23
-95;12;2022-06-19 02:03:28
-96;11;2022-06-18 22:06:50
-97;10;2022-06-20 01:11:16
-98;12;2022-06-20 23:44:46
-99;15;2022-06-20 15:53:37
-100;9;2022-06-20 03:43:54
-101;12;2022-06-20 05:09:56
-102;10;2022-06-18 16:09:41
-103;12;2022-06-20 23:20:09
-104;8;2022-06-20 05:00:17
-105;10;2022-06-20 19:01:27
+id_product;code;name;description;id_brand;id_country;id_provider;id_category;thumbnail;price;discount;created_at;last_update
+1;IA-45CTZYI/BX-03;Caramagnola Plástica Podium 0.5L. Versión Eco. Color A Granel.;Fusce consequat. Nulla nisl. Nunc nisl.;38;47;40;3;/img/products/1629855703-producto1.jpg;450;0;2021-06-18 00:00:00;2021-07-05 04:39:38
+2;QO-XD9KUDP/GY-52;Cubierta De Kevlar Maxxis Race King 29 X 2,15.;Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.;31;226;15;2;/img/products/1636383990-producto2.jpg;4750;0;2021-06-18 00:00:00;2021-12-22 03:00:09
+3;PT-MYTLYTT/UT-65;Gel Energizante Nutrisport Con Cafeína 50g. Express.;Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.;34;66;42;4;/img/products/1634445245-producto3.jpg;125;5;2021-06-18 00:00:00;NULL
+4;AX-GJDHROX/WY-43;Casco Specialized Echelon II Ruta. Verde FL / Small.;In congue. Etiam justo. Etiam pretium iaculis justo.;46;226;46;4;/img/products/1651337062-producto4.jpg;15480;17;2021-06-18 00:00:00;2022-04-05 13:08:26
+5;PY-BANZSLJ/SP-34;Velocimetro Cateye Inalámbrico ST-12.;"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.";10;47;4;3;/img/products/1632301822-producto5.jpg;3560;0;2021-06-18 00:00:00;2021-11-20 19:47:29
+6;BS-X2IEVXK/UE-34;Cámara Tubolito MTB 29 X 1.75.;Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.;51;66;15;2;/img/products/1639809732-producto6.jpg;473;0;2021-06-18 00:00:00;NULL
+7;DV-IILTW2P/YX-01;Zapatillas Specialized S-Works De Ruta. Blanco. Talle: 42.;In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.;46;226;46;5;/img/products/1629163389-producto7.jpg;14910;7;2021-06-18 00:00:00;2021-09-26 19:07:01
+8;VZ-PC00H4N/OA-21;Bicicleta Ruta Giant Propel Advanced Sl 0 Disc 2020;NULL;22;226;30;1;/img/products/1637044353-producto8.jpg;510000;0;2021-06-18 00:00:00;2021-07-24 01:26:15
+9;TI-RY7XSPZ/RJ-13;Bicicleta Ruta Orbea Gain M10 2019;Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.;36;66;31;1;/img/products/1638592138-producto9.jpg;374000;20;2021-06-18 00:00:00;NULL
+10;QI-M68BHAX/HE-26;Bicicleta Ruta Specialized Creo Sl E5 Comp 2020;Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.;46;226;46;1;/img/products/1649798351-producto10.jpg;412000;0;2021-06-18 00:00:00;2021-08-05 16:09:05
+11;NB-ZMZ7TBC/II-41;Bicicleta Ruta Liv Envi Advanced Pro 1 Disc 2021;Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.;28;47;35;1;/img/products/1643034744-producto11.jpg;437000;10;2021-06-18 00:00:00;2021-11-23 18:54:46
+12;NW-MTUYSD7/YX-09;Bicicleta Tria Scott Plasma RC 2021;"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.";41;226;50;1;/img/products/1628096882-producto12.jpg;628000;0;2021-06-18 00:00:00;NULL
+13;NC-AD2T9I0/DN-75;Bicicleta Ruta Giant TCR Advanced SL 1 Disc 2021;NULL;22;226;30;1;/img/products/1635743410-producto13.jpg;475000;0;2021-06-18 00:00:00;2021-07-20 18:04:18
+14;CS-4Y31D4X/FW-20;Bicicleta Ruta Specialized Turbo Levo Comp 29'' 2021;Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.;46;226;46;1;/img/products/1654711502-producto14.jpg;523000;0;2021-06-18 00:00:00;2021-06-30 13:33:01
+15;BZ-C1247IZ/RI-50;Bicicleta MTB Cannondale Scalpel Carbon 3 2021;Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.;8;226;9;1;/img/products/1646928628-producto15.jpg;482000;0;2021-06-18 00:00:00;NULL
+16;HR-PQ0FUR1/PF-05;Bicicleta MTB Orbea Oiz M30 29'' 2020;Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.;36;66;31;1;/img/products/1650504845-producto16.jpg;342000;20;2021-06-18 00:00:00;2021-07-30 00:17:46
+17;AI-ICLSTZI/CJ-17;Bicicleta MTB Merida Big Nine 100 2x 2021;Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.;33;47;42;1;/img/products/1652085458-producto17.jpg;118000;10;2021-06-18 00:00:00;2022-03-12 00:34:27
+18;WT-8U6RMAA/QQ-02;Bicicleta MTB Cannondale Trail 7 2021;Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.;8;226;9;1;/img/products/1636856491-producto18.jpg;157000;0;2021-06-18 00:00:00;2021-09-25 23:11:58
+19;UE-NCNXKT8/SP-37;Bicicleta MTB Giant XTC Advanced SL 29 1 2021;Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.;22;226;30;1;/img/products/1626512677-producto19.jpg;423000;0;2021-06-18 00:00:00;2021-07-05 07:43:46
+20;TW-CGZD57K/AI-62;Bicicleta Urbana Conor Milano 28'' 2021;Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.;11;47;6;1;/img/products/1636503619-producto20.jpg;42000;0;2021-06-18 00:00:00;2022-04-22 12:33:41
+21;DR-SY8Y321/HM-90;Bicicleta Urbana Ryme Dubai 28'' 2021;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.;40;47;39;1;/img/products/1628092129-producto21.jpg;53000;15;2021-06-18 00:00:00;2022-04-13 08:01:39
+22;SA-DEXE7BH/SW-06;Bicicleta Urbana BH Ibiza 2021;Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.;4;47;4;1;/img/products/1633385551-producto22.jpg;68000;0;2021-06-18 00:00:00;2021-07-19 10:21:27
+23;YG-I2N9O16/JN-08;Marzocchi Bomber Z2 E- Bike 29'' Air 130 Rail Boost;Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.;29;108;37;2;/img/products/1636370025-producto23.jpg;58000;15;2021-06-18 00:00:00;2021-10-10 18:09:58
+24;GZ-WOPB7ZO/JR-22;Manillar Carretera Specialized S-Works Shallow Bend Carbon;Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.;46;226;46;2;/img/products/1630569436-producto24.jpg;51000;8;2021-06-18 00:00:00;2022-02-13 13:48:33
+25;AC-31B7DCJ/AI-53;Grupo Completo MTB Sram XX1 Eagle AXS DUB Boost 175mm 34T;Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.;49;226;50;2;/img/products/1637980681-producto25.jpg;123000;13;2021-06-18 00:00:00;NULL
+26;YX-IY06BAC/YQ-25;Disco De Freno Shimano 180mm Rt-MT800;"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.";43;112;46;2;/img/products/1630301963-producto26.jpg;9800;10;2021-06-18 00:00:00;2022-04-27 00:38:36
+27;SY-7DFFIU2/DV-91;Freno Shimano XTR 9000 Delantero;Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.;43;112;46;2;/img/products/1639741081-producto27.jpg;17800;0;2021-06-18 00:00:00;NULL
+28;CB-ZNE6GIZ/ME-16;Freno Shimano XTR 9000 Trasero Post Resina Carbono X;Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.;43;112;46;2;/img/products/1633369705-producto28.jpg;19200;0;2021-06-18 00:00:00;2021-09-26 10:35:34
+29;QJ-4LZ8QNN/VT-62;Freno Sram Code RSC A1 Delantero;"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.";49;226;50;2;/img/products/1650127798-producto29.jpg;25400;14;2021-06-18 00:00:00;2021-07-04 19:04:18
+30;OT-A7AIP8V/QC-71;Freno Sram Code RSC A1 Trasero;Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.;49;226;50;2;/img/products/1636712633-producto30.jpg;25800;14;2021-06-18 00:00:00;2022-02-10 12:06:16
+31;HH-D9A7R7F/DV-52;Cubierta Continental X-King 26x2.20 Rígida;In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.;12;55;15;2;/img/products/1646199999-producto31.jpg;2840;20;2021-06-18 00:00:00;NULL
+32;HK-JQWJE6Y/LD-87;Cubierta Specialized Ground Control Grid Tubeless Ready 29x2.3;NULL;46;226;46;2;/img/products/1653195148-producto32.jpg;5280;0;2021-06-18 00:00:00;2022-01-12 06:19:46
+33;IJ-PH9KPX9/WW-22;Cubierta Continental Grand Prix 5000 700 X 25;In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.;12;55;15;2;/img/products/1624601202-producto33.jpg;4860;15;2021-06-18 00:00:00;2021-11-27 19:08:50
+34;BE-J2N01HV/RP-46;Cubierta Continental Gatorskin 700 X 25;"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.";12;55;15;2;/img/products/1631787681-producto34.jpg;3590;12;2021-06-18 00:00:00;2021-06-22 12:39:29
+35;NM-ZCGO9JM/US-98;Cubierta Maxxis Pursuer 700 X 25;NULL;31;226;15;2;/img/products/1638106832-producto35.jpg;2580;12;2021-06-18 00:00:00;2022-01-20 23:26:46
+36;FU-ETNB722/EI-56;Cuadro Triatlón Giant Trinity Advanced Pro Tri 2020;Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.;22;226;30;2;/img/products/1649026991-producto36.jpg;258000;0;2021-06-18 00:00:00;2022-01-11 07:07:59
+37;QC-IKLL1EV/KY-79;Sillín Fizik Antares R1 Carbon;NULL;19;66;23;2;/img/products/1628489215-producto37.jpg;15400;0;2021-06-18 00:00:00;2021-10-18 09:27:23
+38;WC-6X2P653/RA-54;Sillín Selle Italia MAX SLR Gel Superflow;In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.;42;108;23;2;/img/products/1647168403-producto38.jpg;11900;0;2021-06-18 00:00:00;2021-11-08 18:00:03
+39;BK-4LN7B6T/WT-88;Ruedas MTB Specialized Stout SL Disc 29'';NULL;46;226;46;2;/img/products/1633908958-producto39.jpg;21800;0;2021-06-18 00:00:00;2022-03-11 03:04:56
+40;SY-ZY8MI13/PH-68;Ruedas MTB Mavic Crossmax Elite Carbon 29 Boost XD Intl.;Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.;30;73;39;2;/img/products/1627858287-producto40.jpg;111900;0;2021-06-18 00:00:00;2021-08-22 06:46:57
+41;BX-RWAITT4/AQ-90;Alforjas Topeak Bolsa Trunkbag DXP Velcro;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.;50;47;7;3;/img/products/1635855021-producto41.jpg;9090;0;2021-06-18 00:00:00;2022-05-05 20:32:29
+42;KF-OBYSOMI/TK-89;Bolso Zefal Traveler 80;Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.;52;47;50;3;/img/products/1624483745-producto42.jpg;5600;15;2021-06-18 00:00:00;2021-12-10 15:29:34
+43;GB-E5RHNGT/MX-70;Alforjas Ortlieb Sport-Roller Plus QL2.1 12.5L;Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.;37;55;15;3;/img/products/1643420578-producto43.jpg;13600;17;2021-06-18 00:00:00;2021-07-29 22:10:58
+44;IJ-1N15BYY/XC-85;Portabici Techo Cruz Alu Bike;Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.;14;226;6;3;/img/products/1624393731-producto44.jpg;12800;27;2021-06-18 00:00:00;NULL
+45;CH-4LS63O6/PV-55;Portabici Techo Hast Fijación Cuadro;Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.;26;55;17;3;/img/products/1655444408-producto45.jpg;15900;0;2021-06-18 00:00:00;2022-06-06 01:34:59
+46;DH-FDOGFMM/LR-59;Barras Porta Portón Menabo Stand Up 3;Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.;32;66;40;3;/img/products/1653166905-producto46.jpg;25600;0;2021-06-18 00:00:00;2021-06-30 22:45:18
+47;OM-0PRAHIM/KJ-60;Barras Porta BNB Rack 2 Biker 4x4;NULL;5;47;6;3;/img/products/1626003282-producto47.jpg;55000;16;2021-06-18 00:00:00;2021-09-16 10:08:34
+48;LJ-TQN3SB2/XU-46;Pulsómetro De Bicicleta Garmin Edge 530 Pack;NULL;21;226;27;3;/img/products/1645522526-producto48.jpg;36700;8;2021-06-18 00:00:00;2022-03-06 12:06:03
+49;JN-QIH8PPT/TV-06;Pulsómetro De Bicicleta Bryton Rider 750 T Cadencia, FC Y Veloc.;Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.;6;226;4;3;/img/products/1628135594-producto49.jpg;33900;0;2021-06-18 00:00:00;2021-12-16 21:53:28
+50;TF-Z2ZDC0N/OD-54;Pulsómetro De Pulsera Polar Ignite Gen;Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.;39;226;27;3;/img/products/1631213332-producto50.jpg;19900;0;2021-06-18 00:00:00;2021-07-07 14:07:18
+51;UJ-4J033IO/GH-52;Pulsómetro De Pulsera Garmin Fenix 6 Solar Black Strap;"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.";21;226;27;3;/img/products/1649250879-producto51.jpg;69900;0;2021-06-18 00:00:00;2022-04-22 01:42:20
+52;IX-PH3S90B/SN-84;Cadena Sram PCX! 118 Powerlock 11V;In congue. Etiam justo. Etiam pretium iaculis justo.;49;226;50;3;/img/products/1642388024-producto52.jpg;2850;0;2021-06-18 00:00:00;2021-09-19 03:17:53
+53;IJ-LQZNS0A/EX-11;Cadena Shimano Deore CN-M6100 12V;Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.;43;112;46;3;/img/products/1655068617-producto53.jpg;3260;0;2021-06-18 00:00:00;2022-04-03 19:12:53
+54;EM-XPYRY80/QD-31;Corta Cadena Topeak Super;Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.;50;47;7;3;/img/products/1634242495-producto54.jpg;1240;18;2021-06-18 00:00:00;2022-01-15 21:24:27
+55;UI-TD4T6W7/GG-26;Multiherramienta Topeak Survival Gearbox;Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.;50;47;7;3;/img/products/1644474573-producto55.jpg;2500;0;2021-06-18 00:00:00;2021-06-27 14:49:12
+56;SX-YM4R11E/KA-76;Multiherramienta Crankbrothers M-19;Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.;13;226;9;3;/img/products/1651148261-producto56.jpg;2900;0;2021-06-18 00:00:00;2021-08-17 16:19:58
+57;DH-Q92NQKG/PS-36;Juego De Luces Sigma Aura 80 + Blaze;NULL;45;47;42;3;/img/products/1627749708-producto57.jpg;6700;15;2021-06-18 00:00:00;2021-10-12 03:23:02
+58;MF-AZMOO6J/AC-66;Casco Specialized Chamonix Mips;Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.;46;226;46;4;/img/products/1644016324-producto58.jpg;7230;0;2021-06-18 00:00:00;2021-09-14 01:49:06
+59;WM-GAOPZGY/WR-17;Casco Giro Agilis;Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.;23;108;13;4;/img/products/1649464049-producto59.jpg;6700;12;2021-06-18 00:00:00;NULL
+60;WX-DRCVNQP/BJ-50;Casco Cube AM Race;Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.;15;55;17;4;/img/products/1629833633-producto60.jpg;5960;0;2021-06-18 00:00:00;NULL
+61;SQ-6WGVM84/RL-14;Casco Bell Avenue;Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.;3;226;2;4;/img/products/1639429549-producto61.jpg;5030;14;2021-06-18 00:00:00;2022-05-15 12:27:23
+62;MH-1QQ0CKZ/MI-36;Lentes Oakley Flight Jacket Matte Black;"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.";35;226;30;4;/img/products/1628784952-producto62.jpg;14300;0;2021-06-18 00:00:00;2022-03-26 03:17:12
+63;EA-TU1P53N/EK-01;Lentes Oakley Radar EV Path Steel Fotocromático;Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.;35;226;30;4;/img/products/1653987146-producto63.jpg;15900;0;2021-06-18 00:00:00;2022-01-17 19:23:18
+64;UR-ZY1XEEE/VZ-36;Lentes Spiuk Jifter Espejo;"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.";47;47;42;4;/img/products/1648560028-producto64.jpg;4450;14;2021-06-18 00:00:00;2021-08-17 04:24:52
+65;SD-IFG4AP8/KY-24;Lentes Eltin Full Oversize;Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.;16;47;9;4;/img/products/1648001132-producto65.jpg;3990;10;2021-06-18 00:00:00;2021-11-06 04:12:22
+66;GL-X2XI2TE/TW-38;Protector Coraza Fox Head Raceframe;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.;20;226;18;4;/img/products/1630598915-producto66.jpg;12500;17;2021-06-18 00:00:00;2022-03-24 15:11:46
+67;DL-WPVWKXX/GQ-29;Protector Rodillera Alpinestars E-Ride Knee;Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.;2;47;2;4;/img/products/1633474154-producto67.jpg;6700;0;2021-06-18 00:00:00;NULL
+68;UR-Z73UQ0G/YL-04;Mochila Camelback Mini Mule 1.5L;Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.;7;226;7;4;/img/products/1638833369-producto68.jpg;4600;0;2021-06-18 00:00:00;2021-10-21 07:21:36
+69;LL-OOQFTOX/XV-94;Mochila Ergon BE2 Enduro;NULL;18;47;19;4;/img/products/1626299213-producto69.jpg;12400;19;2021-06-18 00:00:00;2021-10-16 13:09:45
+70;TL-8AF12YH/DW-14;Mochila Camelback Hydroback Light 1.5L;Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.;7;226;7;4;/img/products/1627381485-producto70.jpg;4360;22;2021-06-18 00:00:00;2021-08-10 01:54:18
+71;CX-HR92IJP/CT-45;Mochila Ergon BE3 Enduro;Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.;18;47;19;4;/img/products/1650950480-producto71.jpg;13590;12;2021-06-18 00:00:00;2022-01-15 05:16:45
+72;AF-3VIO02P/LM-10;Protector Codera Alpinestars E-Vent;NULL;2;47;2;4;/img/products/1627441823-producto72.jpg;6420;10;2021-06-18 00:00:00;NULL
+73;VT-AFEMXS0/ZA-10;Protector Rodillera Endura MT500 Lite;Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.;17;47;18;4;/img/products/1636527700-producto73.jpg;6340;9;2021-06-18 00:00:00;2022-01-27 02:42:57
+74;GS-ESP531W/JU-06;Remera Castelli Competizione Ineos Grenadiers;Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.;9;108;13;5;/img/products/1639649319-producto74.jpg;7995;0;2021-06-18 00:00:00;NULL
+75;HE-T3J9CUA/WX-76;Remera Cube TeamLine L/S;In congue. Etiam justo. Etiam pretium iaculis justo.;15;55;17;5;/img/products/1647891243-producto75.jpg;5490;23;2021-06-18 00:00:00;2021-10-11 08:17:13
+76;SY-38YT7O3/AQ-36;Remera Ale Movistar 2020 Prime;Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.;1;47;2;5;/img/products/1641901310-producto76.jpg;6950;18;2021-06-18 00:00:00;2021-12-31 15:46:58
+77;DM-LCZSPUN/XJ-72;Remera Kimoa Lab 01;Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.;27;47;35;5;/img/products/1638018746-producto77.jpg;8990;0;2021-06-18 00:00:00;2021-12-26 21:47:27
+78;LG-3C2PMWA/UR-34;Remera Giant Ride Like King;"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.";22;226;30;5;/img/products/1648755242-producto78.jpg;5990;20;2021-06-18 00:00:00;2021-08-07 16:24:45
+79;RZ-X3N0J37/JD-38;Remera Specialized Roubaix Comp W;"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.";46;226;46;5;/img/products/1647073476-producto79.jpg;4490;16;2021-06-18 00:00:00;NULL
+80;YY-K72BPU4/OJ-32;Remera Cube WLS TeamLine W;NULL;15;55;17;5;/img/products/1653996551-producto80.jpg;4340;16;2021-06-18 00:00:00;2021-10-07 11:06:25
+81;FY-B1NUXQ3/RC-33;Maillot Orbea Skinsuit Lab;"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.";36;66;31;5;/img/products/1635466963-producto81.jpg;18340;0;2021-06-18 00:00:00;2022-03-09 12:50:21
+82;XY-FONN6Z4/HY-24;Maillot Castelli Integral Free Sanremo 2;"Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.";9;108;13;5;/img/products/1646265254-producto82.jpg;17980;0;2021-06-18 00:00:00;2021-11-13 18:47:16
+83;SI-2EP5YW9/ZW-89;Maillot Spiuk Tritraje Universal W;Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.;47;47;42;5;/img/products/1652012497-producto83.jpg;8000;0;2021-06-18 00:00:00;2021-06-23 02:17:12
+84;DR-KD19B4M/NX-05;Calza Gobik Absolute 4.0 K10;Fusce consequat. Nulla nisl. Nunc nisl.;24;66;31;5;/img/products/1637439337-producto84.jpg;10000;0;2021-06-18 00:00:00;2022-06-15 10:01:29
+85;YR-V0NAEPW/PO-04;Calza Specialized Rbx Sport Logo;Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.;46;226;46;5;/img/products/1630935235-producto85.jpg;6690;24;2021-06-18 00:00:00;2021-07-18 07:21:17
+86;XV-EBCH0DK/IL-96;Calza Ale Movistar 2020 Prime;Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.;1;47;2;5;/img/products/1638984047-producto86.jpg;8090;12;2021-06-18 00:00:00;2022-02-05 13:32:41
+87;TZ-NYI6QZ8/OZ-16;Calza Sportful GTS Short;"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.";48;47;19;5;/img/products/1642371796-producto87.jpg;7680;10;2021-06-18 00:00:00;2021-11-29 09:53:24
+88;IQ-ZFJK61M/DS-41;Calza Cube WLS TeamLine W;Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.;15;55;17;5;/img/products/1640278610-producto88.jpg;4950;0;2021-06-18 00:00:00;2021-07-03 12:47:40
+89;LE-QZX60YE/QT-11;Calza Endura FS260 Pro DS W;Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.;17;47;18;5;/img/products/1637094148-producto89.jpg;9460;27;2021-06-18 00:00:00;2022-05-12 22:19:35
+90;PA-IWBXH24/YO-63;Calza Scott Bike RC Pro W;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.;41;226;50;5;/img/products/1650779438-producto90.jpg;7590;0;2021-06-18 00:00:00;2021-10-26 04:29:35
+91;LP-S3K9HUC/NQ-81;Campera Sportful Reflex;In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.;48;47;19;5;/img/products/1633350991-producto91.jpg;3770;25;2021-06-18 00:00:00;2021-12-08 20:19:37
+92;EP-245A0UZ/OF-06;Campera Sportful Hot Pack 6;Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.;48;47;19;5;/img/products/1626513100-producto92.jpg;6280;0;2021-06-18 00:00:00;2022-05-21 13:37:51
+93;ZO-KYMJ09Q/MK-74;Campera Chaleco Cube TeamLine;Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.;15;55;17;5;/img/products/1644338378-producto93.jpg;3850;15;2021-06-18 00:00:00;2022-04-04 08:01:50
+94;WE-E89WEYG/RC-91;Campera Chaleco Castelli Aria Vest;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.;9;108;13;5;/img/products/1624895342-producto94.jpg;8495;0;2021-06-18 00:00:00;2021-11-16 04:14:01
+95;SB-XEYM686/IK-77;Campera Endura FS260-Pro Adenaline Race Cape W;Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.;17;47;18;5;/img/products/1650818852-producto95.jpg;7200;0;2021-06-18 00:00:00;2022-03-26 10:13:09
+96;TZ-8G0UKYM/YF-52;Campera Gore C5 Gore-Text Active W;Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.;25;226;19;5;/img/products/1634977085-producto96.jpg;16800;0;2021-06-18 00:00:00;2021-07-07 11:18:11
+97;XI-LU39QA9/ED-12;Guantes Endura Windchill W;Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.;17;47;18;5;/img/products/1626314198-producto97.jpg;2880;20;2021-06-18 00:00:00;2022-02-15 19:34:08
+98;YK-YFWOAK6/CH-60;Guantes Specialized BG Grail W;NULL;46;226;46;5;/img/products/1637792324-producto98.jpg;2380;0;2021-06-18 00:00:00;NULL
+99;AF-ORL1TX6/ED-86;Guantes Specialized BG Sport Gel SF;Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.;46;226;46;5;/img/products/1646256764-producto99.jpg;2590;0;2021-06-18 00:00:00;2021-07-07 12:24:54
+100;UT-AUS1E0R/XA-09;Guantes Endura Hummvee Plus 2;In congue. Etiam justo. Etiam pretium iaculis justo.;17;47;18;5;/img/products/1638291141-producto100.jpg;2550;0;2021-06-18 00:00:00;2022-02-17 03:47:25
+101;NA-25P3CTO/HV-86;Zapatillas Specialized Torch 3.0 Road;Fusce consequat. Nulla nisl. Nunc nisl.;46;226;46;5;/img/products/1624699814-producto101.jpg;22990;0;2021-06-18 00:00:00;2022-02-05 15:00:09
+102;ZQ-DX60OOM/TF-08;Zapatillas Sidi Shot Carbon Matt;NULL;44;108;37;5;/img/products/1631577715-producto102.jpg;24890;0;2021-06-18 00:00:00;2022-05-02 00:03:43
+103;SD-5BRM1I6/SX-37;Zapatillas Shimano RC500;"Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.";43;112;46;5;/img/products/1633688709-producto103.jpg;11890;12;2021-06-18 00:00:00;2021-10-21 03:40:46
+104;SV-URKN3LA/MB-10;Zapatillas Scott MTB RC W;Phasellus in felis. Donec semper sapien a libero. Nam dui.;41;226;50;5;/img/products/1626859545-producto104.jpg;22420;0;2021-06-18 00:00:00;2022-06-03 00:04:31
+105;LT-JVFYGUB/BU-16;Zapatillas Giro Cylinder 2 W;Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.;23;108;13;5;/img/products/1645433305-producto105.jpg;12900;13;2021-06-18 00:00:00;2022-01-19 10:52:52

@@ -123,7 +123,6 @@ CREATE TABLE product (
     thumbnail VARCHAR(1024),
     price DECIMAL(11,2) NOT NULL,
     discount TINYINT NOT NULL DEFAULT 0,
-    stock SMALLINT NOT NULL DEFAULT 0,
     created_at DATETIME NOT NULL DEFAULT NOW(),
     last_update DATETIME ON UPDATE NOW(),
     PRIMARY KEY (id_product),
@@ -185,6 +184,7 @@ CREATE TABLE order_detail (
     id_product INT UNSIGNED NOT NULL,
     quantity SMALLINT NOT NULL,
     unit_price DECIMAL(11,2) NOT NULL,
+	discount TINYINT NOT NULL DEFAULT 0,
     PRIMARY KEY (id_order, id_product)
 );
 
