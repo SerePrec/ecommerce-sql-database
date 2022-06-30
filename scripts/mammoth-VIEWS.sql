@@ -7,8 +7,6 @@ CREATE OR REPLACE VIEW user_list AS
 	 ON a.id_city=c.id_city
 	 JOIN province p
 	 ON c.id_province=p.id_province
-	 JOIN iva_category i
-	 ON u.id_iva=i.id_iva
 	 ORDER BY last_name, first_name
 	 );
 
