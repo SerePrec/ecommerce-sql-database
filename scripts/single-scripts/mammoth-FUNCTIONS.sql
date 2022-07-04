@@ -36,6 +36,34 @@ BEGIN
 END$$
 DELIMITER ;
 
+-- Function: invoice_type
+-- Objetivo: obtener el tipo de factura a emitir en base al tipo de usuario de la orden asociada
+DROP FUNCTION IF EXISTS `invoice_type`;
+DELIMITER $$
+CREATE FUNCTION `invoice_type`(p_id_order INT)
+RETURNS ENUM("A","B")
+READS SQL DATA
+DETERMINISTIC
+BEGIN
+	DECLARE v_id_iva_category INT;
+	
+    SELECT u.id_iva INTO v_id_iva_category
+	FROM `order` o JOIN user u
+    ON o.id_user=u.id_user
+    WHERE o.id_order=p_id_order;
+    
+    IF v_id_iva_category IS NULL THEN
+		RETURN NULL;
+	END IF;
+    
+	IF v_id_iva_category IN (1, 4, 9, 11) THEN
+		RETURN "A";
+	ELSE
+		RETURN "B";
+	END IF;
+END$$
+DELIMITER ;
+
 -- Function: next_invoice_n
 -- Objetivo: obtener el string representativo del tipo y número de factura siguiente a emitir en base al tipo de factura que elegido
 DROP FUNCTION IF EXISTS `next_invoice_n`;
