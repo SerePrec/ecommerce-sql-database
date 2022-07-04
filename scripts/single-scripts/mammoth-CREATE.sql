@@ -1,16 +1,18 @@
-/***********************************
-	        CREACIÓN DE BD
- ***********************************/
+/*************************************************
+	               CREACIÓN DE BD
+ *************************************************/
 CREATE DATABASE IF NOT EXISTS mammoth;
 USE mammoth;
 
-/***********************************
-          CREACIÓN DE TABLAS 
-************************************/
+/*************************************************
+                  CREACIÓN DE TABLAS 
+ *************************************************/
+ 
 -- TABLES
 -- ******
 
--- Table: user
+-- Table: user 
+-- (Datos de los clientes)
 CREATE TABLE user (
 	id_user INT UNSIGNED NOT NULL AUTO_INCREMENT,
     dni CHAR(8) NOT NULL,
@@ -30,6 +32,7 @@ CREATE TABLE user (
 );
   
 -- Table: subscription
+-- (Suscripciones de los usuarios a los distintos temas de interés)
 CREATE TABLE subscription (
 	id_user INT UNSIGNED NOT NULL,
     id_topic INT UNSIGNED NOT NULL,
@@ -37,6 +40,7 @@ CREATE TABLE subscription (
 );
 
 -- Table: topic
+-- (Temas de suscripción)
 CREATE TABLE topic (
 	id_topic INT UNSIGNED NOT NULL AUTO_INCREMENT,
     topic VARCHAR(20) NOT NULL,
@@ -45,6 +49,7 @@ CREATE TABLE topic (
 );
 
 -- Table: favorite
+-- (Productos favoritos de los usuarios)
 CREATE TABLE favorite (
 	id_user INT UNSIGNED NOT NULL,
     id_product INT UNSIGNED NOT NULL,
@@ -52,6 +57,7 @@ CREATE TABLE favorite (
 );
 
 -- Table: iva_category
+-- (Condición frente al iva)
 CREATE TABLE iva_category (
 	id_iva INT UNSIGNED NOT NULL AUTO_INCREMENT,
     iva_category VARCHAR(50) NOT NULL,
@@ -59,6 +65,7 @@ CREATE TABLE iva_category (
 );
 
 -- Table: address
+-- (Direcciones de usuarios o proveedores)
 CREATE TABLE address (
 	id_address INT UNSIGNED NOT NULL AUTO_INCREMENT,
     address VARCHAR(60) NOT NULL,
@@ -68,6 +75,7 @@ CREATE TABLE address (
 );
 
 -- Table: city
+-- (Listado de ciudades)
 CREATE TABLE city (
 	id_city INT UNSIGNED NOT NULL AUTO_INCREMENT,
     city VARCHAR(50) NOT NULL,
@@ -76,6 +84,7 @@ CREATE TABLE city (
 );
 
 -- Table: province
+-- (Listado de provincias)
 CREATE TABLE province (
 	id_province INT UNSIGNED NOT NULL AUTO_INCREMENT,
     iso_code VARCHAR(6) NOT NULL,
@@ -86,6 +95,7 @@ CREATE TABLE province (
 );
 
 -- Table: country
+-- (Listado de paises)
 CREATE TABLE country (
 	id_country INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	iso_code CHAR(2) NOT NULL,
@@ -95,6 +105,7 @@ CREATE TABLE country (
 );
 
 -- Table: cart
+-- (Carritos de compra de los usuarios)
 CREATE TABLE cart (
 	id_cart INT UNSIGNED NOT NULL AUTO_INCREMENT,
     id_user INT UNSIGNED NOT NULL,
@@ -103,6 +114,7 @@ CREATE TABLE cart (
 );
 
 -- Table: cart_detail
+-- (Detalles del contenido de los carritos de compra por usuario)
 CREATE TABLE cart_detail (
 	id_cart INT UNSIGNED NOT NULL,
     id_product INT UNSIGNED NOT NULL,
@@ -111,6 +123,7 @@ CREATE TABLE cart_detail (
 );
 
 -- Table: product
+-- (Detalles de los productos)
 CREATE TABLE product (
 	id_product INT UNSIGNED NOT NULL AUTO_INCREMENT,
     code VARCHAR(20),
@@ -130,6 +143,7 @@ CREATE TABLE product (
 );
 
 -- Table: category
+-- (Listado de categorias de los productos)
 CREATE TABLE category (
 	id_category INT UNSIGNED NOT NULL AUTO_INCREMENT,
     category VARCHAR(20) NOT NULL,
@@ -138,6 +152,7 @@ CREATE TABLE category (
 );
 
 -- Table: brand
+-- (Listado de marcas)
 CREATE TABLE brand (
 	id_brand INT UNSIGNED NOT NULL AUTO_INCREMENT,
     brand VARCHAR(30) NOT NULL,
@@ -145,6 +160,7 @@ CREATE TABLE brand (
 );
 
 -- Table: provider
+-- (Datos de los proveedores)
 CREATE TABLE provider (
 	id_provider INT UNSIGNED NOT NULL AUTO_INCREMENT,
     cuit CHAR(13) NOT NULL,
@@ -160,6 +176,7 @@ CREATE TABLE provider (
 );
 
 -- Table: stock
+-- (Stock de los productos)
 CREATE TABLE stock (
 	id_product INT UNSIGNED NOT NULL,
     stock SMALLINT NOT NULL DEFAULT 0,
@@ -168,6 +185,7 @@ CREATE TABLE stock (
 );
 
 -- Table: order
+-- (Ordenes de pedido de los usuarios)
 CREATE TABLE `order` (
 	id_order INT UNSIGNED NOT NULL AUTO_INCREMENT,
     id_user INT UNSIGNED NOT NULL,
@@ -179,6 +197,7 @@ CREATE TABLE `order` (
 );
 
 -- Table: order_detail
+-- (Detalles del contenido de los pedidos de compra por usuario)
 CREATE TABLE order_detail (
 	id_order INT UNSIGNED NOT NULL,
     id_product INT UNSIGNED NOT NULL,
@@ -189,6 +208,7 @@ CREATE TABLE order_detail (
 );
 
 -- Table: delivery_type
+-- (Opciones de tipos de retiro / entrega)
 CREATE TABLE delivery_type (
 	id_delivery INT UNSIGNED NOT NULL AUTO_INCREMENT,
     delivery_type VARCHAR(40) NOT NULL,
@@ -196,6 +216,7 @@ CREATE TABLE delivery_type (
 );
 
 -- Table: invoice
+-- (Listado de las facturas de pedidos)
 CREATE TABLE invoice (
 	id_invoice INT UNSIGNED NOT NULL AUTO_INCREMENT,
     invoice_n CHAR(15) NOT NULL,
@@ -210,6 +231,7 @@ CREATE TABLE invoice (
 );
 
 -- Table: payment_method
+-- (Tipos de opciones de pago)
 CREATE TABLE payment_method (
 	id_p_method INT UNSIGNED NOT NULL AUTO_INCREMENT,
     payment_method VARCHAR(20) NOT NULL,
@@ -217,6 +239,7 @@ CREATE TABLE payment_method (
 );
 
 -- Table: card_payment
+-- (Listado de pagos con tarjeta)
 CREATE TABLE card_payment (
 	id_card_payment INT UNSIGNED NOT NULL AUTO_INCREMENT,
     id_invoice INT UNSIGNED NOT NULL,
@@ -226,6 +249,7 @@ CREATE TABLE card_payment (
 );
 
 -- Table: card_issuer
+-- (Entidad emisora de la tarjeta)
 CREATE TABLE card_issuer (
 	id_card_issuer INT UNSIGNED NOT NULL AUTO_INCREMENT,
     card_issuer VARCHAR(30) NOT NULL,
@@ -233,6 +257,7 @@ CREATE TABLE card_issuer (
 );
 
 -- Table: date
+-- (Tabla calendario)
 CREATE TABLE date (
 	id_date INT UNSIGNED NOT NULL AUTO_INCREMENT,
     date DATE NOT NULL,

@@ -1,3 +1,7 @@
+/*************************************************
+				 POBLACIÓN DE TABLAS 
+ *************************************************/
+ 
 -- Table: iva_category
 INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (1,'IVA Responsable Inscripto');
 INSERT INTO iva_category (`id_iva`,`iva_category`) VALUES (2,'IVA Sujeto Exento');
