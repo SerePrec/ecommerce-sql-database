@@ -15,6 +15,8 @@ CREATE OR REPLACE VIEW user_list AS
 	 ORDER BY last_name, first_name
 	 );
 
+#SELECT * FROM user_list;
+
 -- View: favorite_rank
 -- Objetivo: Mostrar los productos que poseen mayor cantidad de usuarios que lo eligieron como favorito, ordenados de manera decreciente según esta cantidad
 CREATE OR REPLACE VIEW favorite_rank AS    
@@ -26,6 +28,8 @@ CREATE OR REPLACE VIEW favorite_rank AS
 	 GROUP BY p.id_product
 	 ORDER BY fav_quantity DESC
 	);
+    
+#SELECT * FROM favorite_rank;
 
 -- View: subscription_by_topic 
 -- Objetivo: Mostrar la cantidad de usuarios suscriptos por cada uno de los temas de interés, ordenados de manera decreciente según esta cantidad   
@@ -36,6 +40,8 @@ CREATE OR REPLACE VIEW subscription_by_topic AS
 	 GROUP BY t.topic
 	 ORDER BY t.topic
 	);
+    
+#SELECT * from subscription_by_topic;
 
 -- View: product_list
 -- Objetivo: Presentar el catálogo de productos del ecommerce junto a su lista de precios        
@@ -49,6 +55,8 @@ CREATE OR REPLACE VIEW product_list AS
 	 ON p.id_category=a.id_category
 	 ORDER BY a.category, p.name
 	);
+    
+#SELECT * FROM product_list;
 
 -- View: product_without_stock
 -- Objetivo: Listar los productos que no cuentan con stock al momento de la consulta
@@ -67,6 +75,8 @@ CREATE OR REPLACE VIEW product_without_stock AS
 							)
 	  ORDER BY a.category, p.name
 	);
+    
+#SELECT * from product_without_stock;
 
 -- View: provider_list
 -- Objetivo: Presentar de manera ordenada la información de mayor utilidad de los proveedores del ecommerce
@@ -80,6 +90,8 @@ CREATE OR REPLACE VIEW provider_list AS
 	 ON c.id_province=p.id_province
 	 ORDER BY pr.name
 	 );
+     
+#SELECT * FROM provider_list;
 
 -- View: order_list
 -- Objetivo: Generar un informe con la información más relevante del estado de los pedidos registrados
@@ -91,6 +103,8 @@ CREATE OR REPLACE VIEW order_list AS
 	ON o.id_delivery=d.id_delivery 
 	ORDER BY IDO
 	);
+    
+#SELECT * FROM order_list;
 
 -- View: order_to_prepare
 -- Objetivo: Mostrar la información básica sobre los pedidos que estan en condiciones para comenzar con su preparación
@@ -103,6 +117,8 @@ CREATE OR REPLACE VIEW order_to_prepare AS
 	WHERE o.status="generada" AND o.paid=1
 	ORDER BY IDO
 	);
+    
+#SELECT * FROM order_to_prepare;
 
 -- View: sales_by_day_of_week
 -- Objetivo: Presentar un informe con los totales de venta históricos agrupados según los días de la semana
@@ -112,7 +128,9 @@ CREATE OR REPLACE VIEW sales_by_day_of_week AS
 	 on i.id_date=d.id_date
 	 GROUP BY day
 	 ORDER BY sales desc
-     );    
+     );
+
+#SELECT * FROM sales_by_day_of_week;
 
 -- View: sales_by_product_category
 -- Objetivo: Presentar un informa con los totales de venta históricos agrupados según las categorías de los productos
@@ -129,3 +147,5 @@ CREATE OR REPLACE VIEW sales_by_product_category AS
 	 group by c.category
 	 ORDER BY sales desc
      );  
+     
+#SELECT * FROM sales_by_product_category;

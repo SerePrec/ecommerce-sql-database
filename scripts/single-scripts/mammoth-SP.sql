@@ -40,6 +40,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+#CALL mammoth.show_products_ordered_by_field('brand', 'desc');
+
 -- Store Procedure: delete_old_carts
 -- Objetivo: Eliminar los carritos de compra con mayor antigüedad que la cantidad de días elegidos (p_days)
 DROP procedure IF EXISTS `delete_old_carts`;
@@ -74,3 +76,5 @@ BEGIN
 	SET sql_safe_updates = 1;
 END$$
 DELIMITER ;
+
+#CALL mammoth.delete_old_carts(40);

@@ -1,7 +1,8 @@
 /*************************************************
 	               CREACIÓN DE BD
  *************************************************/
-CREATE DATABASE IF NOT EXISTS mammoth;
+DROP DATABASE IF EXISTS mammoth;
+CREATE DATABASE mammoth;
 USE mammoth;
 
 /*************************************************
@@ -270,6 +271,29 @@ CREATE TABLE date (
     holiday BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY (id_date),
     CONSTRAINT UN_date UNIQUE (date)
+);
+
+-- Table: table_manipulation_log
+-- (Logs de registros de operaciones DML sobre determinadas tablas)
+CREATE TABLE table_manipulation_log (
+	table_name VARCHAR(40) NOT NULL,
+    operation CHAR(6) NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    user VARCHAR(40) NOT NULL
+);
+
+-- Table: product_price_update
+-- (Movimientos de las actualizaciones de precio por producto)
+CREATE TABLE product_price_update (
+	id_product INT UNSIGNED NOT NULL,
+    name VARCHAR(70) NOT NULL,
+    old_price DECIMAL(11,2) NOT NULL,
+    old_discount  TINYINT NOT NULL,
+    new_price DECIMAL(11,2) NOT NULL,
+    new_discount TINYINT NOT NULL,
+    updated DATETIME,
+    user VARCHAR(40) NOT NULL
 );
 
 
@@ -3293,6 +3317,8 @@ CREATE OR REPLACE VIEW user_list AS
 	 ORDER BY last_name, first_name
 	 );
 
+#SELECT * FROM user_list;
+
 -- View: favorite_rank
 -- Objetivo: Mostrar los productos que poseen mayor cantidad de usuarios que lo eligieron como favorito, ordenados de manera decreciente según esta cantidad
 CREATE OR REPLACE VIEW favorite_rank AS    
@@ -3304,6 +3330,8 @@ CREATE OR REPLACE VIEW favorite_rank AS
 	 GROUP BY p.id_product
 	 ORDER BY fav_quantity DESC
 	);
+    
+#SELECT * FROM favorite_rank;
 
 -- View: subscription_by_topic 
 -- Objetivo: Mostrar la cantidad de usuarios suscriptos por cada uno de los temas de interés, ordenados de manera decreciente según esta cantidad   
@@ -3314,6 +3342,8 @@ CREATE OR REPLACE VIEW subscription_by_topic AS
 	 GROUP BY t.topic
 	 ORDER BY t.topic
 	);
+    
+#SELECT * from subscription_by_topic;
 
 -- View: product_list
 -- Objetivo: Presentar el catálogo de productos del ecommerce junto a su lista de precios        
@@ -3327,6 +3357,8 @@ CREATE OR REPLACE VIEW product_list AS
 	 ON p.id_category=a.id_category
 	 ORDER BY a.category, p.name
 	);
+    
+#SELECT * FROM product_list;
 
 -- View: product_without_stock
 -- Objetivo: Listar los productos que no cuentan con stock al momento de la consulta
@@ -3345,6 +3377,8 @@ CREATE OR REPLACE VIEW product_without_stock AS
 							)
 	  ORDER BY a.category, p.name
 	);
+    
+#SELECT * from product_without_stock;
 
 -- View: provider_list
 -- Objetivo: Presentar de manera ordenada la información de mayor utilidad de los proveedores del ecommerce
@@ -3358,6 +3392,8 @@ CREATE OR REPLACE VIEW provider_list AS
 	 ON c.id_province=p.id_province
 	 ORDER BY pr.name
 	 );
+     
+#SELECT * FROM provider_list;
 
 -- View: order_list
 -- Objetivo: Generar un informe con la información más relevante del estado de los pedidos registrados
@@ -3369,6 +3405,8 @@ CREATE OR REPLACE VIEW order_list AS
 	ON o.id_delivery=d.id_delivery 
 	ORDER BY IDO
 	);
+    
+#SELECT * FROM order_list;
 
 -- View: order_to_prepare
 -- Objetivo: Mostrar la información básica sobre los pedidos que estan en condiciones para comenzar con su preparación
@@ -3381,6 +3419,8 @@ CREATE OR REPLACE VIEW order_to_prepare AS
 	WHERE o.status="generada" AND o.paid=1
 	ORDER BY IDO
 	);
+    
+#SELECT * FROM order_to_prepare;
 
 -- View: sales_by_day_of_week
 -- Objetivo: Presentar un informe con los totales de venta históricos agrupados según los días de la semana
@@ -3390,7 +3430,9 @@ CREATE OR REPLACE VIEW sales_by_day_of_week AS
 	 on i.id_date=d.id_date
 	 GROUP BY day
 	 ORDER BY sales desc
-     );    
+     );
+
+#SELECT * FROM sales_by_day_of_week;
 
 -- View: sales_by_product_category
 -- Objetivo: Presentar un informa con los totales de venta históricos agrupados según las categorías de los productos
@@ -3407,6 +3449,8 @@ CREATE OR REPLACE VIEW sales_by_product_category AS
 	 group by c.category
 	 ORDER BY sales desc
      );  
+     
+#SELECT * FROM sales_by_product_category;
      
      
 /*************************************************
@@ -3428,6 +3472,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+#SELECT get_subtotal(1200, 20, 3);
+
 -- Function: get_order_amount
 -- Objetivo: obtener el importe total de un determinado pedido a partir de su detalle de compra
 DROP FUNCTION IF EXISTS `get_order_amount`;
@@ -3446,6 +3492,8 @@ BEGIN
 	RETURN v_order_amount;
 END$$
 DELIMITER ;
+
+#SELECT get_order_amount(3);
 
 -- Function: invoice_type
 -- Objetivo: obtener el tipo de factura a emitir en base al tipo de usuario de la orden asociada
@@ -3475,6 +3523,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+#SELECT invoice_type(3);
+
 -- Function: next_invoice_n
 -- Objetivo: obtener el string representativo del tipo y número de factura siguiente a emitir en base al tipo de factura que elegido
 DROP FUNCTION IF EXISTS `next_invoice_n`;
@@ -3500,6 +3550,8 @@ BEGIN
 	END IF;
 END$$
 DELIMITER ;
+
+#SELECT next_invoice_n("B");
 
 
 /*************************************************
@@ -3544,6 +3596,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+#CALL mammoth.show_products_ordered_by_field('brand', 'desc');
+
 -- Store Procedure: delete_old_carts
 -- Objetivo: Eliminar los carritos de compra con mayor antigüedad que la cantidad de días elegidos (p_days)
 DROP procedure IF EXISTS `delete_old_carts`;
@@ -3578,3 +3632,67 @@ BEGIN
 	SET sql_safe_updates = 1;
 END$$
 DELIMITER ;
+
+#CALL mammoth.delete_old_carts(40);
+
+
+/*************************************************
+			   CREACIÓN DE TRIGGERS
+ *************************************************/
+ 
+-- Trigger: AF_IN_user_table_manipulation_log
+-- Objetivo: guardar en la tabla de "logs de operaciones DML sobre tablas" la información asociada al evento de inserción de un nuevo usuario
+DROP TRIGGER IF EXISTS AF_IN_user_table_manipulation_log;
+
+CREATE TRIGGER AF_IN_user_table_manipulation_log
+AFTER INSERT ON user
+FOR EACH ROW
+INSERT INTO table_manipulation_log VALUES
+("user", "insert", current_date(), current_time(), user());
+
+
+-- Trigger: AF_UP_user_table_manipulation_log
+-- Objetivo: guardar en la tabla de "logs de operaciones DML sobre tablas" la información asociada al evento de actualización de un usuario
+DROP TRIGGER IF EXISTS AF_UP_user_table_manipulation_log;
+
+CREATE TRIGGER AF_UP_user_table_manipulation_log
+AFTER UPDATE ON user
+FOR EACH ROW
+INSERT INTO table_manipulation_log VALUES
+("user", "update", current_date(), current_time(), user());
+
+
+-- Trigger: AF_DE_user_table_manipulation_log
+-- Objetivo: guardar en la tabla de "logs de operaciones DML sobre tablas" la información asociada al evento de eliminación de un usuario
+DROP TRIGGER IF EXISTS AF_DE_user_table_manipulation_log;
+
+CREATE TRIGGER AF_DE_user_table_manipulation_log
+AFTER DELETE ON user
+FOR EACH ROW
+INSERT INTO table_manipulation_log VALUES
+("user", "delete", current_date(), current_time(), user());
+
+
+-- Trigger: BF_UP_product_product_price_update
+-- Objetivo: guardar en la tabla de "actualizaciones de precios" la información asociada al cambio de precio y/o descuento sobre un producto
+DROP TRIGGER IF EXISTS BF_UP_product_product_price_update;
+
+DELIMITER $$
+CREATE TRIGGER BF_UP_product_product_price_update
+BEFORE UPDATE ON product
+FOR EACH ROW
+BEGIN
+	-- Si el precio pasado para actualizar es negativo, setearlo en 0
+    IF NEW.price < 0 THEN
+		SET NEW.price = 0;
+	END IF;
+    -- Si el descuento pasado para actualizar es negativo, setearlo en 0
+    IF NEW.discount < 0 THEN
+		SET NEW.discount = 0;
+	END IF;
+    
+    INSERT INTO product_price_update VALUES
+    (OLD.id_product, NEW.name, OLD.price, OLD.discount, NEW.price, NEW.discount, now(), user());
+END $$
+DELIMITER ;
+

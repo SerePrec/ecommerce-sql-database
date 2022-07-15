@@ -1,7 +1,8 @@
 /*************************************************
 	               CREACIÓN DE BD
  *************************************************/
-CREATE DATABASE IF NOT EXISTS mammoth;
+DROP DATABASE IF EXISTS mammoth;
+CREATE DATABASE mammoth;
 USE mammoth;
 
 /*************************************************
@@ -270,6 +271,29 @@ CREATE TABLE date (
     holiday BOOLEAN NOT NULL DEFAULT 0,
     PRIMARY KEY (id_date),
     CONSTRAINT UN_date UNIQUE (date)
+);
+
+-- Table: table_manipulation_log
+-- (Logs de registros de operaciones DML sobre determinadas tablas)
+CREATE TABLE table_manipulation_log (
+	table_name VARCHAR(40) NOT NULL,
+    operation CHAR(6) NOT NULL,
+    date DATE NOT NULL,
+    time TIME NOT NULL,
+    user VARCHAR(40) NOT NULL
+);
+
+-- Table: product_price_update
+-- (Movimientos de las actualizaciones de precio por producto)
+CREATE TABLE product_price_update (
+	id_product INT UNSIGNED NOT NULL,
+    name VARCHAR(70) NOT NULL,
+    old_price DECIMAL(11,2) NOT NULL,
+    old_discount  TINYINT NOT NULL,
+    new_price DECIMAL(11,2) NOT NULL,
+    new_discount TINYINT NOT NULL,
+    updated DATETIME,
+    user VARCHAR(40) NOT NULL
 );
 
 

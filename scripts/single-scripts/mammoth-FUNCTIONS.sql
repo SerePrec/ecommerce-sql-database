@@ -17,6 +17,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+#SELECT get_subtotal(1200, 20, 3);
+
 -- Function: get_order_amount
 -- Objetivo: obtener el importe total de un determinado pedido a partir de su detalle de compra
 DROP FUNCTION IF EXISTS `get_order_amount`;
@@ -35,6 +37,8 @@ BEGIN
 	RETURN v_order_amount;
 END$$
 DELIMITER ;
+
+#SELECT get_order_amount(3);
 
 -- Function: invoice_type
 -- Objetivo: obtener el tipo de factura a emitir en base al tipo de usuario de la orden asociada
@@ -64,6 +68,8 @@ BEGIN
 END$$
 DELIMITER ;
 
+#SELECT invoice_type(3);
+
 -- Function: next_invoice_n
 -- Objetivo: obtener el string representativo del tipo y número de factura siguiente a emitir en base al tipo de factura que elegido
 DROP FUNCTION IF EXISTS `next_invoice_n`;
@@ -89,3 +95,5 @@ BEGIN
 	END IF;
 END$$
 DELIMITER ;
+
+#SELECT next_invoice_n("B");
