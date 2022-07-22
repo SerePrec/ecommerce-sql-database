@@ -113,7 +113,7 @@ BEGIN
 	SET v_if_stock = (SELECT min(s.stock - CAST(c.quantity AS SIGNED))
 					  FROM mammoth.cart_detail c JOIN mammoth.stock s
 					  ON c.id_product = s.id_product
-					  WHERE id_cart = p_id_cart);
+					  WHERE c.id_cart = p_id_cart);
                       
 	-- Si el stock < 0, devuelvo un mensaje de error, puesto que algunos de 
     -- los productos seleccionados en el carrito, no cuenta con el stock suficiente 
@@ -138,7 +138,16 @@ BEGIN
 				(SELECT v_id_order, c.id_product, c.quantity, p.price, p.discount
 				 FROM mammoth.cart_detail c JOIN mammoth.product p
 				 ON c.id_product = p.id_product
-				 WHERE id_cart = p_id_cart);
+				 WHERE c.id_cart = p_id_cart);
+			
+            -- Actualizo los stocks de los productos que pertenecen a la orden recién generada
+			UPDATE mammoth.stock AS s
+			SET s.stock = s.stock - (SELECT quantity
+									 FROM order_detail AS o
+                                     WHERE  id_order = v_id_order AND o.id_product = s.id_product) 
+			WHERE s.id_product IN (SELECT id_product
+								   FROM order_detail
+                                   WHERE id_order = v_id_order);
 				 
 			-- Elimino el carrito y por su restricción ON DELETE ON CASCADE también su detalle
 			DELETE FROM cart WHERE id_cart = p_id_cart; 
