@@ -42,6 +42,7 @@ DELIMITER ;
 
 #CALL mammoth.show_products_ordered_by_field('brand', 'desc');
 
+
 -- Store Procedure: delete_old_carts
 -- Objetivo: Eliminar los carritos de compra con mayor antigüedad que la cantidad de días elegidos (p_days)
 DROP procedure IF EXISTS `delete_old_carts`;
@@ -78,3 +79,75 @@ END$$
 DELIMITER ;
 
 #CALL mammoth.delete_old_carts(40);
+
+
+-- Store Procedure: generate_order_from_cart
+-- Objetivo: generar una orden de compra junto a su detalle a partir del id del carrito que da origen
+-- (p_id_cart) y el tipo de envío elegido por el usuario (p_id_delivery). Finalmente borra el carrito
+-- una vez terminada con éxito la transacción. Si el stock de productos no es suficiente aborta el proceso.
+DROP procedure IF EXISTS `generate_order_from_cart`;
+
+DELIMITER $$
+CREATE PROCEDURE generate_order_from_cart(IN p_id_cart INT, IN p_id_delivery INT)
+BEGIN
+    -- Declaro las variables locales
+    DECLARE v_id_user INT;
+    DECLARE v_id_order INT;
+    DECLARE v_if_stock INT;
+    
+	-- Declaro los manejadores de errores y warnings
+    -- Para que ante una ocurrencia de alguna de esas situaciones, dispare un ROLLBACK
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION, SQLWARNING
+	BEGIN
+		-- ERROR y WARNING
+		ROLLBACK;
+        SELECT "Error durante la transacción" Result;
+	END; 
+  
+    -- Obtengo el id_user del usuario propietario del carrito
+	SET v_id_user = (SELECT id_user
+					 FROM mammoth.cart 
+					 WHERE id_cart = p_id_cart);
+    
+    -- Obtengo el valor min del stock que quedaría al efectuar la operación                 
+	SET v_if_stock = (SELECT min(s.stock - CAST(c.quantity AS SIGNED))
+					  FROM mammoth.cart_detail c JOIN mammoth.stock s
+					  ON c.id_product = s.id_product
+					  WHERE id_cart = p_id_cart);
+                      
+	-- Si el stock < 0, devuelvo un mensaje de error, puesto que algunos de 
+    -- los productos seleccionados en el carrito, no cuenta con el stock suficiente 
+    -- para llevar a cabo el proceso de compra.
+    -- También verifico que el carrito exista (pertenezca a un usuario)
+    IF (v_id_user IS NULL) THEN
+		SELECT "Error: carrito inexistente" Result;
+    ELSEIF (v_if_stock < 0) THEN
+		SELECT "Error: alguno de los productos no cuenta con stock suficiente" Result;
+	ELSE
+		-- Inicio la transacción
+		START TRANSACTION;
+			-- creo una nueva orden con los valores que poseo y estado inicial generada y no pagada (0)
+			INSERT INTO mammoth.order VALUES (NULL, v_id_user, p_id_delivery, "generada", 0, now());
+			
+			-- Obtengo el id de la orden recién creada
+			SET v_id_order = (SELECT MAX(id_order)
+							  FROM mammoth.order);
+							  
+			-- Inserto los registros correspondientes del detalle que contenía el carrito asociado a esa orden
+			INSERT INTO mammoth.order_detail
+				(SELECT v_id_order, c.id_product, c.quantity, p.price, p.discount
+				 FROM mammoth.cart_detail c JOIN mammoth.product p
+				 ON c.id_product = p.id_product
+				 WHERE id_cart = p_id_cart);
+				 
+			-- Elimino el carrito y por su restricción ON DELETE ON CASCADE también su detalle
+			DELETE FROM cart WHERE id_cart = p_id_cart; 
+			
+		-- Si todo ocurrió sin problemas, hago el commit de los cambios
+		COMMIT;
+        SELECT concat("La orden ", v_id_order, ", se generó con éxito") Result;
+	END IF;
+END$$
+DELIMITER ;
+
+#CALL mammoth.generate_order_from_cart(5, 2);

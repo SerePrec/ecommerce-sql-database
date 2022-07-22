@@ -6,7 +6,7 @@
 # ************
 
 # Creo el usuario reader con su contraseña
-CREATE USER reader@localhost IDENTIFIED BY 'Reader2022';
+CREATE USER IF NOT EXISTS reader@localhost IDENTIFIED BY 'Reader2022';
 
 # verifico su correcta creación en la tabla users de la BD mysql
 -- SELECT * FROM mysql.user;
@@ -21,7 +21,7 @@ GRANT SELECT ON mammoth.* TO reader@localhost;
 # ************
 
 # Creo el usuario writer con su contraseña
-CREATE USER writer@localhost IDENTIFIED BY 'Writer2022';
+CREATE USER IF NOT EXISTS writer@localhost IDENTIFIED BY 'Writer2022';
 
 # verifico su correcta creación en la tabla users de la BD mysql
 -- SELECT * FROM mysql.user;

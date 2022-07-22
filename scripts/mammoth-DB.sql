@@ -3598,6 +3598,7 @@ DELIMITER ;
 
 #CALL mammoth.show_products_ordered_by_field('brand', 'desc');
 
+
 -- Store Procedure: delete_old_carts
 -- Objetivo: Eliminar los carritos de compra con mayor antigüedad que la cantidad de días elegidos (p_days)
 DROP procedure IF EXISTS `delete_old_carts`;
@@ -3634,6 +3635,78 @@ END$$
 DELIMITER ;
 
 #CALL mammoth.delete_old_carts(40);
+
+
+-- Store Procedure: generate_order_from_cart
+-- Objetivo: generar una orden de compra junto a su detalle a partir del id del carrito que da origen
+-- (p_id_cart) y el tipo de envío elegido por el usuario (p_id_delivery). Finalmente borra el carrito
+-- una vez terminada con éxito la transacción. Si el stock de productos no es suficiente aborta el proceso.
+DROP procedure IF EXISTS `generate_order_from_cart`;
+
+DELIMITER $$
+CREATE PROCEDURE generate_order_from_cart(IN p_id_cart INT, IN p_id_delivery INT)
+BEGIN
+    -- Declaro las variables locales
+    DECLARE v_id_user INT;
+    DECLARE v_id_order INT;
+    DECLARE v_if_stock INT;
+    
+	-- Declaro los manejadores de errores y warnings
+    -- Para que ante una ocurrencia de alguna de esas situaciones, dispare un ROLLBACK
+	DECLARE EXIT HANDLER FOR SQLEXCEPTION, SQLWARNING
+	BEGIN
+		-- ERROR y WARNING
+		ROLLBACK;
+        SELECT "Error durante la transacción" Result;
+	END; 
+  
+    -- Obtengo el id_user del usuario propietario del carrito
+	SET v_id_user = (SELECT id_user
+					 FROM mammoth.cart 
+					 WHERE id_cart = p_id_cart);
+    
+    -- Obtengo el valor min del stock que quedaría al efectuar la operación                 
+	SET v_if_stock = (SELECT min(s.stock - CAST(c.quantity AS SIGNED))
+					  FROM mammoth.cart_detail c JOIN mammoth.stock s
+					  ON c.id_product = s.id_product
+					  WHERE id_cart = p_id_cart);
+                      
+	-- Si el stock < 0, devuelvo un mensaje de error, puesto que algunos de 
+    -- los productos seleccionados en el carrito, no cuenta con el stock suficiente 
+    -- para llevar a cabo el proceso de compra.
+    -- También verifico que el carrito exista (pertenezca a un usuario)
+    IF (v_id_user IS NULL) THEN
+		SELECT "Error: carrito inexistente" Result;
+    ELSEIF (v_if_stock < 0) THEN
+		SELECT "Error: alguno de los productos no cuenta con stock suficiente" Result;
+	ELSE
+		-- Inicio la transacción
+		START TRANSACTION;
+			-- creo una nueva orden con los valores que poseo y estado inicial generada y no pagada (0)
+			INSERT INTO mammoth.order VALUES (NULL, v_id_user, p_id_delivery, "generada", 0, now());
+			
+			-- Obtengo el id de la orden recién creada
+			SET v_id_order = (SELECT MAX(id_order)
+							  FROM mammoth.order);
+							  
+			-- Inserto los registros correspondientes del detalle que contenía el carrito asociado a esa orden
+			INSERT INTO mammoth.order_detail
+				(SELECT v_id_order, c.id_product, c.quantity, p.price, p.discount
+				 FROM mammoth.cart_detail c JOIN mammoth.product p
+				 ON c.id_product = p.id_product
+				 WHERE id_cart = p_id_cart);
+				 
+			-- Elimino el carrito y por su restricción ON DELETE ON CASCADE también su detalle
+			DELETE FROM cart WHERE id_cart = p_id_cart; 
+			
+		-- Si todo ocurrió sin problemas, hago el commit de los cambios
+		COMMIT;
+        SELECT concat("La orden ", v_id_order, ", se generó con éxito") Result;
+	END IF;
+END$$
+DELIMITER ;
+
+#CALL mammoth.generate_order_from_cart(5, 2);
 
 
 /*************************************************
@@ -3705,7 +3778,7 @@ DELIMITER ;
 # ************
 
 # Creo el usuario reader con su contraseña
-CREATE USER reader@localhost IDENTIFIED BY 'Reader2022';
+CREATE USER IF NOT EXISTS reader@localhost IDENTIFIED BY 'Reader2022';
 
 # verifico su correcta creación en la tabla users de la BD mysql
 -- SELECT * FROM mysql.user;
@@ -3720,7 +3793,7 @@ GRANT SELECT ON mammoth.* TO reader@localhost;
 # ************
 
 # Creo el usuario writer con su contraseña
-CREATE USER writer@localhost IDENTIFIED BY 'Writer2022';
+CREATE USER IF NOT EXISTS writer@localhost IDENTIFIED BY 'Writer2022';
 
 # verifico su correcta creación en la tabla users de la BD mysql
 -- SELECT * FROM mysql.user;
@@ -3731,3 +3804,49 @@ GRANT SELECT, INSERT, UPDATE ON mammoth.* TO writer@localhost;
 # verifico los permisos del usuario writer
 -- SHOW GRANTS FOR writer@localhost;
 
+
+/*************************************************
+	               TRANSACCIONES
+ *************************************************/
+
+-- Inicio transacción de eliminación de registros
+-- **********************************************
+START TRANSACTION;
+	DELETE FROM favorite
+    WHERE id_user = 5 AND id_product = 35; 
+	DELETE FROM favorite
+    WHERE id_user = 20 AND id_product = 8;
+	DELETE FROM favorite
+    WHERE id_user = 128 AND id_product = 25;
+
+-- Si quiero deshacer las eliminaciones
+# ROLLBACK;
+
+-- Si quiero persistir las eliminaciones
+COMMIT;   
+
+-- Inicio transacción de inserción de registros con savepoints
+-- ***********************************************************
+START TRANSACTION;
+SAVEPOINT defecto;
+	INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('23268524','Chris','Roizin',29,'M-3582-BIB','+504-996-327-6440','croizin0@topsy.com','JQkTexqZcnQb0HUEvOU9yW4Kg1HhylNI',3,'24-23268524-8');
+	INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('49658397','Demian','Haugh',61,'F-9876-BZA',NULL,'dhaugh1@livejournal.com','H4wqvW3LWO5nff9pqhHn6om08sY5J4YQ',3,'23-49658397-0');
+	INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('19801835','Ricardo','MacGibbon',4,'F-1048-UUO','+86-438-437-9190','rmacgibbon2@yale.edu','3XjIkO0T3O2tyWKQ2qoJ0KjAcT4aAC3u',2,'26-19801835-7');
+	INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('22800504','Tatiana','Savin',135,'S-4869-KDE',NULL,'tsavin34@google.es','9b4k5MCEMy8OX3GjHZETDfP6kWw2CLOX',4,'20-22800504-7');
+SAVEPOINT pack_1; 	
+    INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('29421433','Sam','Dietz',51,'R-0995-IDE','+86-228-424-1758','sdietz14@springer.com','7LuUZsScKgCDjd10xCGLUT6dqYHkJ1AY',1,'27-29421433-0');
+	INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('39123289','Sofie','Coupe',76,'R-4775-TTY',NULL,'socoupe25@dyndns.org','LJgedd9Ks5QeB0xN3RCEKnsZdJhVAxUZ',2,'26-39123289-0');
+	INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('11812384','Silvie','Drioli',40,'L-5227-ZMK','+993-471-983-4374','sidrioli@aboutads.info','4ZfiVjYtJ57zl3InATTT89GyFf4UnrxU',10,'20-11812384-9');
+	INSERT INTO user (`dni`,`first_name`,`last_name`,`id_address`,`postcode`,`phone`,`email`,`password`,`id_iva`,`cuit_cuil`)
+    VALUES ('44556880','Fernando','Poulsen',65,'X-6557-CAS','+1-710-661-3272','fepoulsen17@mapquest.com','umoeZPgPO8aGoOuSWkSIxqu884DPWCxp',8,'27-44556880-6');
+SAVEPOINT pack_2;
+
+-- si quiero deshacer el savepoint pack_1
+# RELEASE SAVEPOINT pack_1;
