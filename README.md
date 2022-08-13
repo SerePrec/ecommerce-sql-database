@@ -48,5 +48,4 @@ El documento debe contener:
 - Scripts de creación de cada objeto de la base de datos,
 - Scripts de inserción de datos,
 - Informes generados en base a la información de la base,
-- Herramientas y tecnologías usadas,
-- Futuras líneas.
+- Herramientas y tecnologías usadas
